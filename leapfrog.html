@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LEAPFROG | Will Christian Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+    <header class="site-header">
+        <div class="site-title-block">
+            <a href="index.html" class="home-link" aria-label="Home">Home</a>
+            <h1>William Christian</h1>
+            <p>Engineering portfolio showcasing hands-on hardware integration, controls, and system-level design.</p>
+        </div>
+    </header>
+
+    <section class="work-samples-section">
+        <h2 class="work-samples-title">Work Samples</h2>
+        <nav class="project-nav">
+        <a class="project-tile project-tile-current" href="leapfrog.html">
+            <div class="project-icon">
+                <img src="images/LEAPFROG/Leapfrog_pic.jpg" alt="LEAPFROG icon">
+            </div>
+            <div class="project-text">
+                <h2>LEAPFROG</h2>
+                <p>Lunar lander style research platform for GN&C and flight software testing.</p>
+            </div>
+        </a>
+        <a class="project-tile" href="starfish.html">
+            <div class="project-icon">
+                <img src="images/STARFISH/image22.png" alt="STARFISH icon">
+            </div>
+            <div class="project-text">
+                <h2>STARFISH</h2>
+                <p>Soft robotics and SMA characterization for in-space manipulation.</p>
+            </div>
+        </a>
+        <a class="project-tile" href="senior-design.html">
+            <div class="project-icon">
+                <img src="images/SENIOR_DESIGN/image43.jpeg" alt="Senior Design icon">
+            </div>
+            <div class="project-text">
+                <h2>Senior Design</h2>
+                <p>Thrust vector control test stand for rocket attitude control research.</p>
+            </div>
+        </a>
+        <a class="project-tile" href="spacecraft-systems.html">
+            <div class="project-icon">
+                <img src="images/SYSTEMS_DESIGN/image68.png" alt="Spacecraft Systems icon">
+            </div>
+            <div class="project-text">
+                <h2>Spacecraft Systems Design</h2>
+                <p>1 km class telescope mission to GEO with full systems analysis.</p>
+            </div>
+        </a>
+        </nav>
+    </section>
+
+    <main class="content">
+        <section id="leapfrog" class="leapfrog-section">
+            <div class="leapfrog-bg" aria-hidden="true"></div>
+            <div class="leapfrog-overlay" aria-hidden="true"></div>
+            <div class="leapfrog-content">
+                <div class="resume-header">
+                    <div class="project-title-stack">
+                        <h2 class="resume-main-title">LEAPFROG</h2>
+                        <div class="project-subtitle">Lunar Entry and Approach Platform for Research on Ground</div>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <p class="project-intro">
+                        SERC project focused on a reusable lunar-lander style testbed for guidance, navigation, and control research.
+                        Work spanned electronics integration, mechanical design, and flight software architecture.
+                    </p>
+
+                    <hr class="resume-divider">
+                    <article>
+                    <h3 class="resume-section-title">System Overview</h3>
+                    <p>Multirotor-like test vehicle with jet engine, electric ducted fans, and ground station link for scripted flight tests.</p>
+                    <ul>
+                        <li>Component stack including GST, RFD 900X radios, Raspberry Pi 4, STM32, ESCs & EDFs, multiple IMUs, LIDAR, linear actuators, and JetCat Pro engine.</li>
+                        <li>Used for validating attitude control, state estimation, and autonomous landing behaviors.</li>
+                    </ul>
+                    <figure>
+                        <div class="media-grid media-grid--2">
+                            <img src="images/LEAPFROG/Leapfrog_pic.jpg" alt="LEAPFROG vehicle photo">
+                            <img src="images/LEAPFROG/Leaprog_cad.PNG" alt="LEAPFROG CAD view">
+                        </div>
+                    </figure>
+                    </article>
+
+                <hr class="resume-divider">
+                    <article>
+                    <h3 class="resume-section-title">Electronics</h3>
+                    <ul>
+                        <li>Integrated avionics stack (STM32 + Raspberry Pi) with sensor suite, radios, and power distribution.</li>
+                        <li>Developed wiring and interface documentation to support rapid assembly and test iteration.</li>
+                    </ul>
+                    <figure>
+                        <div class="media-grid">
+                            <img src="images/LEAPFROG/component_blockDiagram.jpeg" alt="LEAPFROG component block diagram">
+                            <img src="images/LEAPFROG/wiring_diagram.jpeg" alt="LEAPFROG wiring diagram">
+                        </div>
+                    </figure>
+                    </article>
+
+                <hr class="resume-divider">
+                    <article>
+                    <h3 class="resume-section-title">Mechanical</h3>
+                    <ul>
+                        <li>Redesigned leg mounts to secure the swivel joint without adhesives or welding, improving strength and rigidity.</li>
+                        <li>Performed impulse force calculations for worst-case landing (34 kg vehicle, 10 m/s, 6800 N impact force).</li>
+                        <li>Ran FEA to estimate deformation and stress; iterated bracket geometry to survive worst-case loading with acceptable strain.</li>
+                    </ul>
+                    <figure>
+                        <div class="media-grid">
+                            <div class="media-grid media-grid--2">
+                                <img src="images/LEAPFROG/structures_2.png" alt="LEAPFROG structures figure 2">
+                                <img src="images/LEAPFROG/structures_3.png" alt="LEAPFROG structures figure 3">
+                            </div>
+                            <img src="images/LEAPFROG/structures_4.png" alt="LEAPFROG structures figure 4">
+                            <img src="images/LEAPFROG/structures_5.png" alt="LEAPFROG structures figure 5">
+                            <img src="images/LEAPFROG/structures_1.png" alt="LEAPFROG structures figure 1">
+                            <img src="images/LEAPFROG/side-strut.png" alt="LEAPFROG side strut">
+                        </div>
+                    </figure>
+                    </article>
+
+                <hr class="resume-divider">
+                    <article>
+                    <h3 class="resume-section-title">Attitude Control System (ACS)</h3>
+                    <ul>
+                        <li>Implemented PID-based control laws for pitch, roll, and yaw using fan pairs (PR1–4 and Y1–2).</li>
+                        <li>Tuned controller gains based on full ACS test output graphs to achieve stable response.</li>
+                        <li>Normalized post-calculation PID outputs mapped directly to ESC commands.</li>
+                    </ul>
+                    <figure>
+                        <div class="media-grid">
+                            <div class="media-grid media-grid--2">
+                                <img src="images/LEAPFROG/ACS_PID_3.jpeg" alt="ACS PID figure 3">
+                                <img src="images/LEAPFROG/ACS_PID_1.png" alt="ACS PID figure 1">
+                            </div>
+                            <img src="images/LEAPFROG/ACS_PID_2.png" alt="ACS PID figure 2">
+                            <div class="media-grid media-grid--2">
+                                <img src="images/LEAPFROG/ACS_Plot_1.png" alt="ACS plot 1">
+                                <img src="images/LEAPFROG/ACS_Plot_2.png" alt="ACS plot 2">
+                            </div>
+                        </div>
+                    </figure>
+                    </article>
+
+                <hr class="resume-divider">
+                    <article>
+                    <h3 class="resume-section-title">Flight Software (FSW)</h3>
+                    <ul>
+                        <li>Dual-layer architecture: STM32 with RTOS for low-level control and sensor fusion; Raspberry Pi with ROS2 for high-level mission logic.</li>
+                        <li>CLI-based ground station executing customizable flight scripts with telemetry logging.</li>
+                        <li>Heartbeat-based command chain (CLI → Pi → STM32) with ROS bridge nodes for telemetry and safety behaviors (safe landing, engine cooldown on heartbeat loss).</li>
+                    </ul>
+                    <figure>
+                        <div class="media-grid">
+                            <img src="images/LEAPFROG/FlightSoftware_BlockDiagram.jpeg" alt="Flight software block diagram">
+                            <img src="images/LEAPFROG/coms_blockDiagram.png" alt="Communications block diagram">
+                        </div>
+                    </figure>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact: <a href="mailto:williamp.christian@gmail.com">williamp.christian@gmail.com</a></p>
+    </footer>
+    </div>
+
+    <script>
+        (function () {
+            var bg = document.querySelector('.leapfrog-bg');
+            if (!bg) return;
+
+            function updateLeapfrogBg() {
+                var y = window.scrollY || window.pageYOffset || 0;
+                var speed = 0.18;
+                bg.style.transform = 'translate3d(0,' + (-y * speed) + 'px,0) scale(1.15)';
+            }
+
+            window.addEventListener('scroll', updateLeapfrogBg, { passive: true });
+            window.addEventListener('resize', updateLeapfrogBg);
+            updateLeapfrogBg();
+        })();
+    </script>
+</body>
+</html>

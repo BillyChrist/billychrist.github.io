@@ -1,0 +1,12 @@
+WILLIAM CHRISTIAN
+EDUCATION
+SKILLS
+Core Competencies: AI&T, FEA, Mechanical Design, GD&T, Motion Simulation, MBSE, STM, Technical Writing
+Software & Simulation: MATLAB, Siemens NX, SolidWorks, AutoCAD, Simulink, ANSYS Thermal Desktop, LabVIEW, Python, Git, LaTeX, RTOS, C/C++
+Hardware & Manufacturing: STM32, Raspberry Pi, Arduino, 3D Printing, CNC Mill/Lathe, Waterjet, Composites & Layup
+EXPERIENCE
+ACADEMIC PROJECTS
+Designed and validated closed-loop control for a dual-axis TVC gimbal, modeling actuator-geometry relationships and integrating IMU and position feedback to achieve stable multi-axis thrust vectoring.
+Developed and tested the electromechanical TVC testbed, increasing actuator speed from 0.37 to 2.00 in/s and achieving 25 Hz closed-loop response with ±0.1° pointing accuracy; implemented safety fallback logic on an STM32 RTOS architecture in C/C++.
+Designed and built a three-motor autonomous VTOL aircraft with tilting forward rotors and EDF main thrust, integrating carbon-fiber structure, servo-actuated control surfaces, and transition mechanisms for vertical-to-forward flight.
+Developed 3D-printed airfoils (LW-PLA) using specialized design techniques and validated aerodynamic performance in SolidWorks CFD (≈9° AoA pre-stall); implemented flight control on Arduino Teensy based on dRehmFlight software.

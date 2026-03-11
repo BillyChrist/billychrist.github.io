@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STARFISH | Will Christian Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+    <header class="site-header">
+        <div class="site-title-block">
+            <a href="index.html" class="home-link" aria-label="Home">Home</a>
+            <h1>William Christian</h1>
+            <p>Engineering portfolio showcasing hands-on hardware integration, controls, and system-level design.</p>
+        </div>
+    </header>
+
+    <section class="work-samples-section">
+        <h2 class="work-samples-title">Work Samples</h2>
+        <nav class="project-nav">
+        <a class="project-tile" href="leapfrog.html">
+            <div class="project-icon">
+                <img src="images/LEAPFROG/Leapfrog_pic.jpg" alt="LEAPFROG icon">
+            </div>
+            <div class="project-text">
+                <h2>LEAPFROG</h2>
+                <p>Lunar lander style research platform for GN&C and flight software testing.</p>
+            </div>
+        </a>
+        <a class="project-tile project-tile-current" href="starfish.html">
+            <div class="project-icon">
+                <img src="images/STARFISH/image22.png" alt="STARFISH icon">
+            </div>
+            <div class="project-text">
+                <h2>STARFISH</h2>
+                <p>Soft robotics and SMA characterization for in-space manipulation.</p>
+            </div>
+        </a>
+        <a class="project-tile" href="senior-design.html">
+            <div class="project-icon">
+                <img src="images/SENIOR_DESIGN/image43.jpeg" alt="Senior Design icon">
+            </div>
+            <div class="project-text">
+                <h2>Senior Design</h2>
+                <p>Thrust vector control test stand for rocket attitude control research.</p>
+            </div>
+        </a>
+        <a class="project-tile" href="spacecraft-systems.html">
+            <div class="project-icon">
+                <img src="images/SYSTEMS_DESIGN/image68.png" alt="Spacecraft Systems icon">
+            </div>
+            <div class="project-text">
+                <h2>Spacecraft Systems Design</h2>
+                <p>1 km class telescope mission to GEO with full systems analysis.</p>
+            </div>
+        </a>
+        </nav>
+    </section>
+
+    <main class="content">
+        <section id="starfish">
+            <div class="resume-header">
+                <div class="project-title-stack">
+                    <h2 class="resume-main-title">STARFISH</h2>
+                    <div class="project-subtitle">Soft Translatable Actuated Robot for in Space Handling</div>
+                </div>
+            </div>
+            <p>
+                SERC soft robotics research project characterizing Shape Memory Alloy (SMA) actuators and limb motion
+                using custom motion capture and data analysis tools.
+            </p>
+
+            <article>
+                <h3>Research Goals</h3>
+                <ul>
+                    <li>Quantify SMA actuation uncertainty across multiple thermal cycles.</li>
+                    <li>Develop testbeds for 1D and 2D limb characterization using motion capture and thermocouples.</li>
+                    <li>Automate data collection and analysis for temperature, strain, and bend angle.</li>
+                </ul>
+                <figure>
+                    <img src="images/STARFISH/image22.png" alt="STARFISH system overview" width="600">
+                </figure>
+            </article>
+
+            <article>
+                <h3>SMA Preparation</h3>
+                <ul>
+                    <li>Prepared thermocouples using Kapton tape and thermal adhesive to minimize added thermal mass.</li>
+                    <li>Designed attachment method to avoid electrical conduction between SMA and thermocouples.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>1D SMA Characterization</h3>
+                <ul>
+                    <li>Built 1D actuation stand with calibrated camera and motion capture target.</li>
+                    <li>Ran multiple trials across voltage and mass combinations to measure contraction/relaxation times.</li>
+                    <li>Reported averages such as 5.7 ± 0.7 s contraction and 27 ± 2 s relaxation for representative cases.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>2D Limb Characterization</h3>
+                <ul>
+                    <li>Created top-down camera setup with multi-color motion capture markers on a full limb.</li>
+                    <li>Automated experiments for target temperature vs. bend angle, bend angle vs. time, and actuation time vs. angle.</li>
+                    <li>Analyzed uncertainty ranges during primary actuation and improved thermal/position models.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>SMA Characterization Software</h3>
+                <ul>
+                    <li>Developed motion capture pipeline using OpenCV with contour moments for accurate ball tracking.</li>
+                    <li>Computed bend angles and arc radii from marker positions with color-separated tracks.</li>
+                    <li>Produced averaged measurements for more reliable series data across trials.</li>
+                </ul>
+                <figure>
+                    <img src="images/STARFISH/image31.png" alt="STARFISH software and motion capture views" width="600">
+                </figure>
+                <p>
+                    Additional figures and animations:
+                    <a href="images/STARFISH/image30.gif">limb actuation gif</a>,
+                    <a href="images/STARFISH/image32.gif">motion capture visualization</a>.
+                </p>
+            </article>
+
+            <article>
+                <h3>Media</h3>
+                <p>Selected photos and diagrams from hardware setups and experiments.</p>
+                <ul>
+                    <li><a href="images/STARFISH/STARFISH Circuit Diagram.pdf">STARFISH circuit diagram</a></li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact: <a href="mailto:williamp.christian@gmail.com">williamp.christian@gmail.com</a></p>
+    </footer>
+    </div>
+</body>
+</html>
