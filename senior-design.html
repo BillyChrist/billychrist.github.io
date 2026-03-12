@@ -72,48 +72,57 @@
             </p>
 
             <article>
+                <div class="article-body">
                 <h3>Project Overview</h3>
                 <ul>
                     <li>Designed and assembled a TVC test stand for AME 441.</li>
                     <li>Integrated mechanical structure, actuators, sensors, and embedded electronics.</li>
                     <li>Developed control algorithms to study translational capability and angle vs. thrust behavior.</li>
                 </ul>
+                </div>
                 <figure>
                     <img src="images/SENIOR_DESIGN/TVC_Electronics_BlockDiagram.jpg" alt="TVC system overview" width="600">
                 </figure>
             </article>
 
             <article>
+                <div class="article-body">
                 <h3>Controls and System Constraints</h3>
                 <ul>
                     <li>Defined system constraints including maximum thrust (300 N) and maximum gimbal angle (~11.19°).</li>
                     <li>Used small-angle approximations and critically damped ACS assumptions for control design.</li>
                     <li>Formulated corrective throttle compensation to maintain vertical thrust when gimbaling.</li>
                 </ul>
+                </div>
                 <figure>
                     <img src="images/SENIOR_DESIGN/TVC_ElectricalSchematic.jpg" alt="TVC controls and actuator layout" width="600">
                 </figure>
             </article>
 
             <article>
+                <div class="article-body">
                 <h3>Actuator Dynamics & Kinematics</h3>
                 <ul>
                     <li>Derived relationships between gimbal rotation (θ, ϕ) and actuator stroke (Lx, Ly).</li>
                     <li>Used rotation matrices and system geometry to compute required actuator length changes.</li>
                     <li>Linearized via a Jacobian to capture cross-axis coupling for small-angle motions.</li>
                 </ul>
+                </div>
             </article>
 
             <article>
+                <div class="article-body">
                 <h3>Electronics & Software</h3>
                 <ul>
                     <li>Implemented control logic on an STM32 microcontroller running C with RTOS.</li>
                     <li>Integrated sensor suite including multiple IMUs and actuator potentiometers.</li>
                     <li>Built redundancy and sensor fusion into the feedback loop for safety and precision.</li>
                 </ul>
+                </div>
             </article>
 
             <article>
+                <div class="article-body">
                 <h3>Testing & Results</h3>
                 <ul>
                     <li>Defined a test matrix covering axis sweeps, combined motions, and step responses.</li>
@@ -124,14 +133,17 @@
                     Additional imagery and build photos are available in the
                     <code>images/SENIOR_DESIGN/</code> directory.
                 </p>
+                </div>
             </article>
 
             <article>
+                <div class="article-body">
                 <h3>Media</h3>
                 <ul>
                     <li><a href="video/SENIOR_DESIGN/media1.mov">TVC stand video 1</a></li>
                     <li><a href="video/SENIOR_DESIGN/media2.mov">TVC stand video 2</a></li>
                 </ul>
+                </div>
             </article>
         </section>
     </main>

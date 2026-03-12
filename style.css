@@ -375,53 +375,47 @@ body {
     margin-bottom: 48px;
 }
 
+/* Work sample articles: left = text, right = images. One row, no wrap. */
 .content article {
-    display: grid;
-    grid-template-columns: 1fr minmax(260px, 42%);
+    display: flex;
+    flex-wrap: nowrap;
     gap: 32px 40px;
-    align-items: start;
+    align-items: flex-start;
     margin-bottom: 36px;
 }
-
-.content article > * {
-    grid-column: 1;
+.content article > .article-body {
+    flex: 1 1 0;
     min-width: 0;
 }
-
 .content article > figure {
-    grid-column: 2;
-    grid-row: 1 / -1;
+    flex: 0 0 42%;
+    min-width: 260px;
     margin: 0;
 }
-
-.content article > figure img {
+.content article > figure img,
+.content article > figure .media-grid img {
+    max-width: 100%;
     width: 100%;
     height: auto;
-    margin: 0;
     display: block;
-    border-radius: 8px;
+    margin: 0;
+    border-radius: 0;
 }
 
-/* Simple image groups (single / side-by-side) */
+/* Media grids: default single column. */
 .media-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 12px;
 }
-
 .media-grid--2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
 }
-
 .media-grid img {
     width: 100%;
     height: auto;
-    display: block;
-    border-radius: 8px;
-}
-
-.content article:not(:has(figure)) {
-    grid-template-columns: 1fr;
+    border-radius: 0;
 }
 
 .content h3 {
@@ -437,7 +431,7 @@ p {
 
 img {
     margin-top: 10px;
-    border-radius: 6px;
+    border-radius: 0;
 }
 
 footer {
@@ -495,16 +489,6 @@ footer a:hover {
     }
 }
 
-@media (max-width: 768px) {
-    .content article {
-        grid-template-columns: 1fr;
-    }
-
-    .content article > figure {
-        grid-column: 1;
-        grid-row: auto;
-    }
-}
 
 @media (max-width: 640px) {
     .page {

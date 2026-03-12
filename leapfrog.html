@@ -72,33 +72,47 @@
 
                 <div class="resume-section">
                     <p class="project-intro">
-                        SERC project focused on a reusable lunar-lander style testbed for guidance, navigation, and control research.
-                        Work spanned electronics integration, mechanical design, and flight software architecture.
+                        LEAPFROG is a full-scale autonomous lunar lander test platform developed at USC’s Space Engineering Research Center to support hardware-in-the-loop testing of guidance, navigation, and control systems.
+                    </p>
+                    <p class="project-intro">
+                        My work focused on project leadership, system design and architecture, vehicle integration and testing, mechanical design, and development of embedded flight software for closed-loop control.
                     </p>
 
                     <hr class="resume-divider">
                     <article>
+                    <div class="article-body">
                     <h3 class="resume-section-title">System Overview</h3>
-                    <p>Multirotor-like test vehicle with jet engine, electric ducted fans, and ground station link for scripted flight tests.</p>
+                    <p>Project Details and Involvement</p>
                     <ul>
-                        <li>Component stack including GST, RFD 900X radios, Raspberry Pi 4, STM32, ESCs & EDFs, multiple IMUs, LIDAR, linear actuators, and JetCat Pro engine.</li>
-                        <li>Used for validating attitude control, state estimation, and autonomous landing behaviors.</li>
+                        <li>Development of the vehicle required resolving several system-level design challenges spanning structures, propulsion, flight computing, and control system stability.</li>
+                        
+                        <li>The landing leg assembly was redesigned to support repeated landings and survive a 1 meter drop test. Structural analysis and redesign of the suspension interface increased the survivable landing impulse while maintaining strict vehicle mass limits.</li>
+                        
+                        <li>The original cold-gas reaction control system was replaced with an electrically driven attitude control system using eight electric ducted fans powered by rechargeable LiPo batteries. This eliminated reliance on consumables and enabled repeatable test operations without external gas infrastructure.</li>
+                        
+                        <li>The flight computing architecture was upgraded from a single-board control solution to a distributed architecture using an STM32 microcontroller for real-time control tasks and a Raspberry Pi for high-level coordination, enabling RTOS-based control loops and ROS2 integration.</li>
+                        
+                        <li>A control strategy was developed to resolve coupling between the turbine thrust vector control system and the attitude control system, preventing oscillatory behavior and allowing the two control systems to cooperate during stabilization.</li>
+                        
+                        <li>Vehicle mass growth analysis showed that it exceeded the propulsion system lift margin. Component-level mass optimization and material selection were performed across the vehicle to maintain flight capability while preserving structural and functional requirements.</li>
+                        
+                        <li>I led the integration of these systems, bringing the project from a proposed component list to a functional experimental flight vehicle through mechanical design, embedded software development, and system integration testing.</li>
                     </ul>
+                    </div>
                     <figure>
-                        <div class="media-grid media-grid--2">
-                            <img src="images/LEAPFROG/Leapfrog_pic.jpg" alt="LEAPFROG vehicle photo">
-                            <img src="images/LEAPFROG/Leaprog_cad.PNG" alt="LEAPFROG CAD view">
-                        </div>
+                        <img src="images/LEAPFROG/System_Overview.png" alt="LEAPFROG system overview">
                     </figure>
                     </article>
 
                 <hr class="resume-divider">
                     <article>
+                    <div class="article-body">
                     <h3 class="resume-section-title">Electronics</h3>
                     <ul>
                         <li>Integrated avionics stack (STM32 + Raspberry Pi) with sensor suite, radios, and power distribution.</li>
                         <li>Developed wiring and interface documentation to support rapid assembly and test iteration.</li>
                     </ul>
+                    </div>
                     <figure>
                         <div class="media-grid">
                             <img src="images/LEAPFROG/component_blockDiagram.jpeg" alt="LEAPFROG component block diagram">
@@ -109,12 +123,14 @@
 
                 <hr class="resume-divider">
                     <article>
+                    <div class="article-body">
                     <h3 class="resume-section-title">Mechanical</h3>
                     <ul>
                         <li>Redesigned leg mounts to secure the swivel joint without adhesives or welding, improving strength and rigidity.</li>
                         <li>Performed impulse force calculations for worst-case landing (34 kg vehicle, 10 m/s, 6800 N impact force).</li>
                         <li>Ran FEA to estimate deformation and stress; iterated bracket geometry to survive worst-case loading with acceptable strain.</li>
                     </ul>
+                    </div>
                     <figure>
                         <div class="media-grid">
                             <div class="media-grid media-grid--2">
@@ -131,12 +147,14 @@
 
                 <hr class="resume-divider">
                     <article>
+                    <div class="article-body">
                     <h3 class="resume-section-title">Attitude Control System (ACS)</h3>
                     <ul>
                         <li>Implemented PID-based control laws for pitch, roll, and yaw using fan pairs (PR1–4 and Y1–2).</li>
                         <li>Tuned controller gains based on full ACS test output graphs to achieve stable response.</li>
                         <li>Normalized post-calculation PID outputs mapped directly to ESC commands.</li>
                     </ul>
+                    </div>
                     <figure>
                         <div class="media-grid">
                             <div class="media-grid media-grid--2">
@@ -154,12 +172,14 @@
 
                 <hr class="resume-divider">
                     <article>
+                    <div class="article-body">
                     <h3 class="resume-section-title">Flight Software (FSW)</h3>
                     <ul>
                         <li>Dual-layer architecture: STM32 with RTOS for low-level control and sensor fusion; Raspberry Pi with ROS2 for high-level mission logic.</li>
                         <li>CLI-based ground station executing customizable flight scripts with telemetry logging.</li>
                         <li>Heartbeat-based command chain (CLI → Pi → STM32) with ROS bridge nodes for telemetry and safety behaviors (safe landing, engine cooldown on heartbeat loss).</li>
                     </ul>
+                    </div>
                     <figure>
                         <div class="media-grid">
                             <img src="images/LEAPFROG/FlightSoftware_BlockDiagram.jpeg" alt="Flight software block diagram">
