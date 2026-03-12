@@ -392,6 +392,9 @@ body {
     min-width: 260px;
     margin: 0;
 }
+.content article.article--center-figure > figure {
+    align-self: center;
+}
 .content article > figure img,
 .content article > figure .media-grid img {
     max-width: 100%;
