@@ -306,22 +306,25 @@ body {
         6px 6px 14px rgba(0, 0, 0, 0.8);
 }
 
-.project-icon {
+/* Work sample tiles: every icon is the same square with rounded corners. */
+.project-tile .project-icon {
     width: 100%;
-    padding-bottom: 60%;
+    padding-bottom: 100%;
     position: relative;
     overflow: hidden;
     border-radius: 12px;
     margin-bottom: 12px;
-    background: radial-gradient(circle at top left, #333a5a, #05060a);
 }
 
-.project-icon img {
+.project-tile .project-icon img {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 12px !important;
+    display: block;
 }
 
 .project-text h2 {
@@ -417,6 +420,11 @@ body {
     margin: 0;
     border-radius: 0;
 }
+.content article > figure.figure--shrink-70 .media-grid {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /* Media grids: default single column. */
 .media-grid {
@@ -449,7 +457,7 @@ p {
 }
 
 img {
-    margin-top: 10px;
+    margin-top: 0;
     border-radius: 0;
 }
 
@@ -475,7 +483,7 @@ footer a:hover {
     height: 140vh;
     background-image: url("images/LEAPFROG/leapfrog_BG.png");
     background-size: cover;
-    background-position: center top;
+    background-position: center 15%;
     background-repeat: no-repeat;
     will-change: transform;
     transform: translate3d(0, 0, 0) scale(1.15);
@@ -502,12 +510,138 @@ footer a:hover {
     padding: 24px 0 16px;
 }
 
+/* STARFISH full-page background (image rotated 90deg), parallax */
+.starfish-bg {
+    position: fixed;
+    width: 140vmax;
+    height: 140vmax;
+    left: 50%;
+    top: 50%;
+    background-image: url("images/STARFISH/STARFISH_bg.png");
+    background-size: cover;
+    background-position: center 65%;
+    background-repeat: no-repeat;
+    filter: brightness(0.6);
+    will-change: transform;
+    transform: translate(-50%, -50%) translate3d(0, 0, 0) rotate(90deg);
+    transform-origin: center center;
+    z-index: -2;
+}
+
+.starfish-overlay {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(5, 6, 10, 0.75) 0%,
+        rgba(5, 6, 10, 0.6) 40%,
+        rgba(5, 6, 10, 0.7) 100%
+    );
+    z-index: -1;
+    pointer-events: none;
+}
+
+.starfish-content {
+    position: relative;
+    z-index: 2;
+    padding: 24px 0 16px;
+}
+
+/* Senior Design (TVC) full-page background, parallax */
+.senior-design-bg {
+    position: fixed;
+    inset: 0;
+    height: 140vh;
+    background-image: url("images/SENIOR_DESIGN/TVC_bg.jpg");
+    background-size: cover;
+    background-position: center 15%;
+    background-repeat: no-repeat;
+    filter: brightness(0.6);
+    will-change: transform;
+    transform: translate3d(0, 0, 0) scale(1.15);
+    transform-origin: center top;
+    z-index: -2;
+}
+
+.senior-design-overlay {
+    position: fixed;
+    inset: 0;
+    background:
+        /* Left/right edge darkening (primary) */
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.65) 0%,
+            rgba(0, 0, 0, 0.15) 18%,
+            rgba(0, 0, 0, 0.0) 50%,
+            rgba(0, 0, 0, 0.15) 82%,
+            rgba(0, 0, 0, 0.65) 100%
+        ),
+        /* Vignette (thicker fade around edges) */
+        radial-gradient(
+            ellipse at center,
+            rgba(0, 0, 0, 0.0) 0%,
+            rgba(0, 0, 0, 0.0) 30%,
+            rgba(0, 0, 0, 0.75) 100%
+        ),
+        /* Subtle top/bottom shading (secondary) */
+        linear-gradient(
+            to bottom,
+            rgba(5, 6, 10, 0.75) 0%,
+            rgba(5, 6, 10, 0.6) 40%,
+            rgba(5, 6, 10, 0.7) 100%
+        );
+    z-index: -1;
+    pointer-events: none;
+}
+
+.senior-design-content {
+    position: relative;
+    z-index: 2;
+    padding: 24px 0 16px;
+}
+
+/* Spacecraft Systems Design full-page background (rotated 90deg, 30% dimmer), parallax */
+.systems-bg {
+    position: fixed;
+    width: 140vmax;
+    height: 140vmax;
+    left: 50%;
+    top: 50%;
+    background-image: url("images/SYSTEMS_DESIGN/SYSTEMS_bg.jpg");
+    background-size: cover;
+    background-position: center 65%;
+    background-repeat: no-repeat;
+    filter: brightness(0.7);
+    will-change: transform;
+    transform: translate(-50%, -50%) translate3d(0, 0, 0) rotate(90deg);
+    transform-origin: center center;
+    z-index: -2;
+}
+
+.systems-overlay {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(5, 6, 10, 0.75) 0%,
+        rgba(5, 6, 10, 0.6) 40%,
+        rgba(5, 6, 10, 0.7) 100%
+    );
+    z-index: -1;
+    pointer-events: none;
+}
+
+.systems-content {
+    position: relative;
+    z-index: 2;
+    padding: 24px 0 16px;
+}
+
 @media (max-width: 960px) {
     .project-nav {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
-
 
 @media (max-width: 640px) {
     .page {

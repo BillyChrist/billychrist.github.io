@@ -17,7 +17,10 @@
     </header>
 
     <main class="content">
-        <section id="spacecraft-systems">
+        <section id="spacecraft-systems" class="systems-section">
+            <div class="systems-bg" aria-hidden="true"></div>
+            <div class="systems-overlay" aria-hidden="true"></div>
+            <div class="systems-content">
             <div class="resume-header">
                 <div class="project-title-stack">
                     <h2 class="resume-main-title">Spacecraft Systems Design</h2>
@@ -88,6 +91,7 @@
                 </ul>
                 </div>
             </article>
+            </div>
         </section>
     </main>
 
@@ -96,7 +100,7 @@
         <nav class="project-nav">
         <a class="project-tile" href="leapfrog.html">
             <div class="project-icon">
-                <img src="images/LEAPFROG/Leapfrog_pic.jpg" alt="LEAPFROG icon">
+                <img src="images/LEAPFROG/LEAPFROG_icon.PNG" alt="LEAPFROG icon">
             </div>
             <div class="project-text">
                 <h2>LEAPFROG</h2>
@@ -105,7 +109,7 @@
         </a>
         <a class="project-tile" href="starfish.html">
             <div class="project-icon">
-                <img src="images/STARFISH/image22.png" alt="STARFISH icon">
+                <img src="images/STARFISH/STARFISH_icon.PNG" alt="STARFISH icon">
             </div>
             <div class="project-text">
                 <h2>STARFISH</h2>
@@ -114,7 +118,7 @@
         </a>
         <a class="project-tile" href="senior-design.html">
             <div class="project-icon">
-                <img src="images/SENIOR_DESIGN/image43.jpeg" alt="Senior Design icon">
+                <img src="images/SENIOR_DESIGN/SeniorDesign_icon.PNG" alt="Senior Design icon">
             </div>
             <div class="project-text">
                 <h2>Senior Design</h2>
@@ -123,7 +127,7 @@
         </a>
         <a class="project-tile project-tile-current" href="spacecraft-systems.html">
             <div class="project-icon">
-                <img src="images/SYSTEMS_DESIGN/image68.png" alt="Spacecraft Systems icon">
+                <img src="images/SYSTEMS_DESIGN/SCsystems_icon.PNG" alt="Spacecraft Systems icon">
             </div>
             <div class="project-text">
                 <h2>Spacecraft Systems Design</h2>
@@ -137,5 +141,19 @@
         <p>Contact: <a href="mailto:williamp.christian@gmail.com">williamp.christian@gmail.com</a></p>
     </footer>
     </div>
+    <script>
+        (function () {
+            var bg = document.querySelector('.systems-bg');
+            if (!bg) return;
+            function updateSystemsBg() {
+                var y = window.scrollY || window.pageYOffset || 0;
+                var speed = 0.18;
+                bg.style.transform = 'translate(-50%, -50%) translate3d(0,' + (-y * speed) + 'px,0) rotate(90deg)';
+            }
+            window.addEventListener('scroll', updateSystemsBg, { passive: true });
+            window.addEventListener('resize', updateSystemsBg);
+            updateSystemsBg();
+        })();
+    </script>
 </body>
 </html>
