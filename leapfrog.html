@@ -54,7 +54,7 @@
                         <br>
                         <li>Vehicle mass growth analysis showed that it exceeded the propulsion system lift margin. Component-level mass optimization and material selection were performed across the vehicle to maintain flight capability while preserving structural and functional requirements.</li>
                         <br>
-                        <li>I led the integration of these systems, bringing the project from a proposed component list to a functional experimental flight vehicle through mechanical design, embedded software development, and system integration testing.</li>
+                        <li>As project lead, I guided cross-disciplinary engineering teams and coordinated development across the project to advance the vehicle toward flight-ready testing.</li>
                     </ul>
                     </div>
                     <figure>
@@ -63,12 +63,29 @@
                     </article>
 
                 <hr class="resume-divider">
-                    <article>
+                    <article class="article--center-figure">
                     <div class="article-body">
                     <h3 class="resume-section-title">Electronics</h3>
                     <ul>
-                        <li>Integrated avionics stack (STM32 + Raspberry Pi) with sensor suite, radios, and power distribution.</li>
-                        <li>Developed wiring and interface documentation to support rapid assembly and test iteration.</li>
+                        <p>
+                            The vehicle avionics system was built around a distributed flight computing architecture combining an STM32 microcontroller for real-time control tasks and a Raspberry Pi for high-level command execution, telemetry, and system coordination.
+                            </p>
+                            
+                            <p>
+                            The electronics stack integrates navigation sensors, propulsion control hardware, communications systems, and power distribution into a unified flight control network. Key components include multiple IMUs and a LIDAR sensor for state estimation, RFD900X radios for ground station communication, ESC-driven electric ducted fans for attitude control, and supporting propulsion and actuator hardware.
+                            </p>
+                            
+                            <p>
+                            The diagrams on the right show the full avionics block diagram and the detailed wiring schematic used during system integration and testing.
+                            </p>
+                            
+                            <ul>
+                            <li>Developed the complete avionics architecture integrating flight computers, sensors, propulsion control hardware, communications systems, and power distribution.</li>
+                            <br>
+                            <li>Produced wiring schematics and interface documentation used to support rapid vehicle assembly, troubleshooting, and iterative testing.</li>
+                            <br>
+                            <li>Integrated key hardware including STM32 flight controller, Raspberry Pi flight computer, IMU array, LIDAR altimeter, RFD900X radios, ESC-driven EDF attitude control system, and supporting propulsion electronics.</li>
+                            </ul>
                     </ul>
                     </div>
                     <figure>
@@ -80,7 +97,7 @@
                     </article>
 
                 <hr class="resume-divider">
-                    <article>
+                    <article class="article--center-figure">
                     <div class="article-body">
                     <h3 class="resume-section-title">Mechanical</h3>
                     <ul>
@@ -92,8 +109,7 @@
                     <figure>
                         <div class="media-grid">
                             <div class="media-grid media-grid--2">
-                                <img src="images/LEAPFROG/structures_2.png" alt="LEAPFROG structures figure 2">
-                                <img src="images/LEAPFROG/structures_3.png" alt="LEAPFROG structures figure 3">
+                                <img class="media-grid__span-2" src="images/LEAPFROG/structures_2&3.PNG" alt="LEAPFROG structures figures 2 and 3">
                             </div>
                             <img src="images/LEAPFROG/structures_4.png" alt="LEAPFROG structures figure 4">
                             <img src="images/LEAPFROG/structures_5.png" alt="LEAPFROG structures figure 5">
@@ -104,7 +120,7 @@
                     </article>
 
                 <hr class="resume-divider">
-                    <article>
+                    <article class="article--center-figure">
                     <div class="article-body">
                     <h3 class="resume-section-title">Attitude Control System (ACS)</h3>
                     <ul>
@@ -115,21 +131,17 @@
                     </div>
                     <figure>
                         <div class="media-grid">
-                            <div class="media-grid media-grid--2">
-                                <img src="images/LEAPFROG/ACS_PID_3.jpeg" alt="ACS PID figure 3">
-                                <img src="images/LEAPFROG/ACS_PID_1.png" alt="ACS PID figure 1">
-                            </div>
                             <img src="images/LEAPFROG/ACS_PID_2.png" alt="ACS PID figure 2">
+                            <img src="images/LEAPFROG/ACS_PID_3.jpeg" alt="ACS PID figure 3">
                             <div class="media-grid media-grid--2">
-                                <img src="images/LEAPFROG/ACS_Plot_1.png" alt="ACS plot 1">
-                                <img src="images/LEAPFROG/ACS_Plot_2.png" alt="ACS plot 2">
+                                <img class="media-grid__span-2" src="images/LEAPFROG/ACS_Plot_1&2.PNG" alt="ACS plots 1 and 2">
                             </div>
                         </div>
                     </figure>
                     </article>
 
                 <hr class="resume-divider">
-                    <article>
+                    <article class="article--center-figure">
                     <div class="article-body">
                     <h3 class="resume-section-title">Flight Software (FSW)</h3>
                     <ul>
@@ -141,7 +153,7 @@
                     <figure>
                         <div class="media-grid">
                             <img src="images/LEAPFROG/FlightSoftware_BlockDiagram.jpeg" alt="Flight software block diagram">
-                            <img src="images/LEAPFROG/coms_blockDiagram.png" alt="Communications block diagram">
+                            <img src="images/LEAPFROG/CD&H_Diagram.png" alt="C&amp;DH diagram">
                         </div>
                     </figure>
                     </article>
@@ -159,7 +171,7 @@
             </div>
             <div class="project-text">
                 <h2>LEAPFROG</h2>
-                <p>Lunar lander style research platform for GN&C and flight software testing.</p>
+                <p>Lunar Lander Flight Vehicle Research Platform</p>
             </div>
         </a>
         <a class="project-tile" href="starfish.html">

@@ -428,6 +428,9 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 4px;
 }
+.media-grid--2 > .media-grid__span-2 {
+    grid-column: 1 / -1;
+}
 .media-grid img {
     width: 100%;
     height: auto;
