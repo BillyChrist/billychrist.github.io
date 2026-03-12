@@ -438,6 +438,11 @@ body {
     margin-right: auto;
 }
 
+/* STARFISH: slightly smaller centered video */
+#starfish .section-video {
+    width: 60%;
+}
+
 /* Media grids: default single column. */
 .media-grid {
     display: grid;

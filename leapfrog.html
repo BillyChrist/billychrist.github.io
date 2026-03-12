@@ -12,7 +12,7 @@
         <div class="site-title-block">
             <a href="index.html" class="home-link" aria-label="Home">Home</a>
             <h1>William Christian</h1>
-            <p>Engineering portfolio showcasing hands-on hardware integration, controls, and system-level design.</p>
+            <p>Project Lead | Systems Integration, Embedded Flight Software, Controls, Hardware Testing.</p>
         </div>
     </header>
 
@@ -83,7 +83,9 @@
 
                     <ul>
                         <li>Developed the complete avionics architecture integrating flight computers, sensors, propulsion control hardware, communications systems, and power distribution.</li>
+                        <br>
                         <li>Produced wiring schematics and interface documentation used to support rapid vehicle assembly, troubleshooting, and iterative testing.</li>
+                        <br>
                         <li>Integrated key hardware including STM32 flight controller, Raspberry Pi flight computer, IMU array, LIDAR altimeter, RFD900X radios, ESC-driven EDF attitude control system, and supporting propulsion electronics.</li>
                     </ul>
                     </div>
@@ -113,16 +115,19 @@
                     
                     <ul>
                         <li>Performed impulse force analysis for worst-case landing conditions (30 kg vehicle mass, 10 m/s velocity, approximately 6.8 kN impact force including margin).</li>
+                        <br>
                         <li>Conducted finite element analysis comparing the original landing mount and the redesigned geometry, demonstrating improved stress distribution and reduced deformation at critical attachment points.</li>
+                        <br>
                         <li>Iterated bracket geometry to survive worst-case loading while maintaining vehicle mass constraints.</li>
                     </ul>
-                    <br><br><br><br><br><br><br>
+                    <br><br><br><br><br><br><br><br><br>
                     <p>
                         The full landing leg assembly shown on the right includes the side-strut structure, compression and damping springs, and ball-joint mounting interfaces used to absorb landing loads.
                     </p>
 
                     <ul>
                         <li>Development, fabrication, and integration of the landing leg assembly incorporated side-strut linkages, spring-damper elements, and ball-joint mounting interfaces.</li>
+                        <br>
                         <li>Performed component-level evaluation and material selection, implementing carbon-fiber structural members and nylon-T300 carbon fiber composite joints to maintain strength while minimizing vehicle mass.</li>
                     </ul>
                     </div>
@@ -157,13 +162,16 @@
 
                     <ul>
                         <li>A three-axis test stand was developed to evaluate the attitude control system. The vehicle was mounted on a low-friction ball bearing fixture allowing near-frictionless rotation about the roll, pitch, and yaw axes.</li>
+                        <br>
                         <li>Controlled perturbations of approximately 30° yaw, 10° pitch, and 5° roll were introduced while the controller actively stabilized the vehicle.</li>
+                        <br>
                         <li>Measured response plots show the vehicle returning to equilibrium following the disturbance, along with the corresponding PID output commands distributed to the EDF actuators.</li>
+                        <br>
                         <li>Controller tuning was performed through iterative hardware testing to achieve stable response while minimizing oscillation and overshoot.</li>
                     </ul>
 
                     <p>
-                        A successful test during integration and testing is shown below. This video shows the vehicle held at an initial measured perturbation, released, and then returning to nominal attitude.
+                        A successful integration test is shown in the video below. The vehicle is released from a measured attitude perturbation and returns to nominal orientation under closed-loop control.
                     </p>
 
                     </div>
@@ -189,10 +197,30 @@
                     <article class="article--center-figure">
                     <div class="article-body">
                     <h3 class="resume-section-title">Flight Software (FSW)</h3>
+                    <p>
+                        The flight software architecture separates real-time flight control from high level coordination using a dual-layer control stack. An STM32 microcontroller executes deterministic control loops under FreeRTOS, while a Raspberry Pi running ROS2 manages command handling, telemetry streaming, and mission coordination.
+                    </p>
+
+                    <p>
+                        The STM32 embedded layer interfaces directly with flight hardware including IMUs, a LIDAR altimeter, thrust vectoring actuators, and ESC driven electric ducted fans. Independent FreeRTOS tasks manage attitude control, engine throttle regulation, thrust vector control, and telemetry handling, allowing deterministic execution and fault isolation for each subsystem.
+                    </p>
+
+                    <p>
+                        The Raspberry Pi coordination layer acts as the bridge between the embedded flight controller and the external ground station. Commands received over the long-range RF radio link are decoded and forwarded to the STM32, while telemetry from the embedded controller is republished for real-time monitoring and logging.
+                    </p>
+
+                    <p>
+                        The diagrams on the right illustrate the software architecture and the communication chain linking the ground station, coordination layer, and embedded control system.
+                    </p>
+
                     <ul>
-                        <li>Dual-layer architecture: STM32 with RTOS for low-level control and sensor fusion; Raspberry Pi with ROS2 for high-level mission logic.</li>
-                        <li>CLI-based ground station executing customizable flight scripts with telemetry logging.</li>
-                        <li>Heartbeat-based command chain (CLI → Pi → STM32) with ROS bridge nodes for telemetry and safety behaviors (safe landing, engine cooldown on heartbeat loss).</li>
+                        <li>Implemented a dual-layer control architecture combining FreeRTOS-based embedded control with ROS2 coordination and telemetry management.</li>
+                        <br>
+                         <li>Developed real-time firmware on the STM32 to execute ACS, TVC, engine throttle control, and telemetry tasks with deterministic scheduling.</li>
+                        <br>
+                        <li>Implemented a serial command protocol and heartbeat mechanism to maintain synchronization and detect communication faults between system layers.</li>
+                        <br>
+                        <li>Integrated ground station command handling and telemetry logging through ROS2 publisher and subscriber nodes.</li>
                     </ul>
                     </div>
                     <figure>
@@ -225,7 +253,7 @@
             </div>
             <div class="project-text">
                 <h2>STARFISH</h2>
-                <p>Soft robotics and SMA characterization for in-space manipulation.</p>
+                <p>Soft robotics and SMA characterization for in-space manipulation</p>
             </div>
         </a>
         <a class="project-tile" href="senior-design.html">
@@ -234,7 +262,7 @@
             </div>
             <div class="project-text">
                 <h2>Senior Design</h2>
-                <p>Thrust vector control test stand for rocket attitude control research.</p>
+                <p>Thrust vector control test stand for rocket attitude control research</p>
             </div>
         </a>
         <a class="project-tile" href="spacecraft-systems.html">
@@ -243,7 +271,7 @@
             </div>
             <div class="project-text">
                 <h2>Spacecraft Systems Design</h2>
-                <p>1 km class telescope mission to GEO with full systems analysis.</p>
+                <p>1 km class telescope mission to GEO with full systems analysis</p>
             </div>
         </a>
         </nav>
