@@ -426,6 +426,18 @@ body {
     margin-right: auto;
 }
 
+.section-media-center {
+    max-width: 980px;
+    margin: 18px auto 28px;
+}
+.section-video {
+    display: block;
+    width: 70%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Media grids: default single column. */
 .media-grid {
     display: grid;

@@ -110,13 +110,13 @@
                     <p>
                         The figures on the right show the redesigned landing leg mount and a cross-section view highlighting the internal geometry used to redirect bending loads away from the joint interface.
                     </p>
-
+                    
                     <ul>
                         <li>Performed impulse force analysis for worst-case landing conditions (30 kg vehicle mass, 10 m/s velocity, approximately 6.8 kN impact force including margin).</li>
                         <li>Conducted finite element analysis comparing the original landing mount and the redesigned geometry, demonstrating improved stress distribution and reduced deformation at critical attachment points.</li>
                         <li>Iterated bracket geometry to survive worst-case loading while maintaining vehicle mass constraints.</li>
                     </ul>
-
+                    <br><br><br><br><br><br><br>
                     <p>
                         The full landing leg assembly shown on the right includes the side-strut structure, compression and damping springs, and ball-joint mounting interfaces used to absorb landing loads.
                     </p>
@@ -143,11 +143,29 @@
                     <article class="article--center-figure">
                     <div class="article-body">
                     <h3 class="resume-section-title">Attitude Control System (ACS)</h3>
+                    <p>
+                        Vehicle attitude control was implemented using an eight-fan electric ducted fan (EDF) attitude control system regulated by a PID feedback controller. The controller processes orientation measurements from the IMU array and generates commanded power values for each fan group to stabilize roll, pitch, and yaw.
+                    </p>
+
+                    <p>
+                        The controller architecture was modeled and validated using Simulink before implementation in the embedded flight software. The control loop computes proportional, integral, and derivative terms from the attitude error and distributes the resulting control outputs to the ESC-driven EDF actuators.
+                    </p>
+
+                    <p>
+                        The figures on the right show the PID control equations used in the flight software, the Simulink block diagram used during controller development, and measured response data from hardware testing.
+                    </p>
+
                     <ul>
-                        <li>Implemented PID-based control laws for pitch, roll, and yaw using fan pairs (PR1–4 and Y1–2).</li>
-                        <li>Tuned controller gains based on full ACS test output graphs to achieve stable response.</li>
-                        <li>Normalized post-calculation PID outputs mapped directly to ESC commands.</li>
+                        <li>A three-axis test stand was developed to evaluate the attitude control system. The vehicle was mounted on a low-friction ball bearing fixture allowing near-frictionless rotation about the roll, pitch, and yaw axes.</li>
+                        <li>Controlled perturbations of approximately 30° yaw, 10° pitch, and 5° roll were introduced while the controller actively stabilized the vehicle.</li>
+                        <li>Measured response plots show the vehicle returning to equilibrium following the disturbance, along with the corresponding PID output commands distributed to the EDF actuators.</li>
+                        <li>Controller tuning was performed through iterative hardware testing to achieve stable response while minimizing oscillation and overshoot.</li>
                     </ul>
+
+                    <p>
+                        A successful test during integration and testing is shown below. This video shows the vehicle held at an initial measured perturbation, released, and then returning to nominal attitude.
+                    </p>
+
                     </div>
                     <figure>
                         <div class="media-grid">
@@ -159,6 +177,13 @@
                         </div>
                     </figure>
                     </article>
+
+                    <div class="section-media-center">
+                        <video class="section-video" controls preload="metadata">
+                            <source src="video/LEAPFROG/roughcut_1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
 
                 <hr class="resume-divider">
                     <article class="article--center-figure">
