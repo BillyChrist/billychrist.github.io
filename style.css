@@ -392,7 +392,20 @@ body {
     min-width: 260px;
     margin: 0;
 }
+/* If you want the right-column image vertically centered in one section,
+   grid is more reliable than flex (no margin-collapsing / baseline quirks). */
+.content article.article--center-figure {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 42%);
+    column-gap: 40px;
+    row-gap: 32px;
+    align-items: start;
+}
+.content article.article--center-figure > .article-body {
+    grid-column: 1;
+}
 .content article.article--center-figure > figure {
+    grid-column: 2;
     align-self: center;
 }
 .content article > figure img,
