@@ -12,7 +12,7 @@
         <div class="site-title-block">
             <a href="index.html" class="home-link" aria-label="Home">Home</a>
             <h1>William Christian</h1>
-            <p>Engineering portfolio showcasing hands-on hardware integration, controls, and system-level design.</p>
+            <p>Mechatronics Engineer | Experimental Systems, Instrumentation, Data Acquisition & Analysis, Motion Tracking</p>
         </div>
     </header>
 
@@ -30,20 +30,20 @@
 
                 <div class="resume-section">
                     <p class="project-intro">
-                        SERC soft robotics research project characterizing Shape Memory Alloy (SMA) actuators and limb motion
-                        using custom motion capture and data analysis tools.
+                        SERC soft robotics research project focused on characterizing Shape Memory Alloy (SMA) actuators and limb motion in both ambient and vacuum environments using custom motion capture, instrumentation, and data analysis tools.
                     </p>
 
                     <hr class="resume-divider">
                     <article class="article--center-figure">
                         <div class="article-body">
                             <h3 class="resume-section-title">Research Goals</h3>
-                            <p>This is a stand-in paragraph, content to follow!</p>
-                            <ul>
-                                <li>Quantify SMA actuation uncertainty across multiple thermal cycles.</li>
-                                <li>Develop testbeds for 1D and 2D limb characterization using motion capture and thermocouples.</li>
-                                <li>Automate data collection and analysis for temperature, strain, and bend angle.</li>
-                            </ul>
+                            <p>
+                                Shape Memory Alloy (SMA) actuators exhibit nonlinear and cycle-dependent behavior, leading to variation in contraction and relaxation performance between actuation cycles. This research focused on experimentally characterizing that variability through repeated actuation tests and controlled measurement of actuator motion and temperature.
+                            </p>
+                                
+                            <p>
+                                Three experimental testbeds were developed to support this analysis: a 1D actuator characterization system, a 2D robotic limb test platform to characterize limb motion with opposing actuators, and a platform to characterize full limb motion in 3D space. Custom software was implemented to automate motion sequences, data collection using motion capture tracking and thermocouple measurements, enabling synchronized acquisition of position, temperature, and actuation data for later analysis.
+                            </p>
                         </div>
                         <figure>
                             <div class="media-grid">
@@ -56,11 +56,26 @@
                     <article class="article--center-figure">
                         <div class="article-body">
                             <h3 class="resume-section-title">SMA Preparation</h3>
-                            <p>This is a stand-in paragraph, content to follow!</p>
-                            <ul>
-                                <li>Prepared thermocouples using Kapton tape and thermal adhesive to minimize added thermal mass.</li>
-                                <li>Designed attachment method to avoid electrical conduction between SMA and thermocouples.</li>
-                            </ul>
+                                <p>
+                                Accurate characterization of Shape Memory Alloy (SMA) actuators requires temperature instrumentation that does not interfere with the electrical actuation process. Because the SMA wires are driven by Joule heating, improper sensor attachment can alter current flow, introduce thermal insulation effects, or create mechanical constraints that distort actuator behavior.
+                                </p>
+                                
+                                <p>
+                                To address this, a repeatable preparation procedure was developed for instrumenting SMA wires with thermocouples while minimizing electrical and thermal interference. The thermocouple junction was attached directly to the actuator using thermally conductive paste, and the leads were insulated and strain-relieved using Kapton tape. Component selection and attachment methods were evaluated to ensure reliable thermal contact without affecting electrical current paths or actuator motion.
+                                </p>
+                                
+                                <p>
+                                The images on the right show the step-by-step preparation process and the fully instrumented SMA actuator used during testing.
+                                </p>
+                                
+                                <ul>
+                                <li>Researched attachment methods, thermal interface materials, and insulation techniques to balance measurement accuracy with minimal impact on actuator performance.</li>
+                                <br>
+                                <li>Developed a repeatable preparation process for attaching thermocouples to SMA wires without altering electrical current flow or mechanical behavior.</li>
+                                <br>
+                                <li>Documented the procedure as part of the laboratory standard operating procedure (SOP) used for robotic limb assembly and actuator testing.</li>
+                                <br>
+                                </ul>
                         </div>
                         <figure>
                             <div class="media-grid">
@@ -81,11 +96,43 @@
                     <article class="article--center-figure">
                         <div class="article-body">
                             <h3 class="resume-section-title">1D SMA Characterization</h3>
-                            <p>This is a stand-in paragraph, content to follow!</p>
+                            <p>
+                                To understand the behavior of the Shape Memory Alloy (SMA) actuators used in the robotic limb,
+                                I designed and constructed a dedicated 1D actuator characterization platform. The goal of this
+                                system was to measure contraction behavior, cycle timing, and thermal response under controlled
+                                electrical and mechanical conditions before integrating the actuators into the full limb assembly.
+                            </p>
+
+                            <p>
+                                The testbed combined optical motion tracking with temperature measurement and automated actuation
+                                control. A Raspberry Pi equipped with a thermocouple interface (MCC 134) recorded actuator temperature
+                                while executing repeated heating and cooling cycles driven by Joule heating. A motion capture camera
+                                tracked the displacement of a visual marker attached to the actuator, allowing strain to be measured
+                                continuously during contraction and relaxation.
+                            </p>
+
+                            <p>
+                                Custom software was developed to automate actuation sequences, vary input voltage, and collect
+                                synchronized motion and temperature data for later analysis. The images on the right show the 1D test
+                                platform and representative datasets used to characterize actuator performance.
+                            </p>
+
                             <ul>
-                                <li>Built 1D actuation stand with calibrated camera and motion capture target.</li>
-                                <li>Ran multiple trials across voltage and mass combinations to measure contraction/relaxation times.</li>
-                                <li>Reported averages such as 5.7 ± 0.7 s contraction and 27 ± 2 s relaxation for representative cases.</li>
+                                <li>Designed and constructed a 1D actuator testbed combining motion capture tracking and thermocouple instrumentation.</li>
+                                <br>
+                                <li>Developed control software on a Raspberry Pi to automate actuation cycles and log synchronized temperature, strain, and time measurements.</li>
+                                <br>
+                                <li>Performed voltage characterization at a constant 150 g load to evaluate contraction dynamics across multiple actuation cycles.</li>
+                                <br>
+                                <li>Measured an average contraction time of <strong>5.7 ± 0.7 s</strong> and relaxation time of <strong>27 ± 2 s</strong> across the tested voltage range.</li>
+                                <br>
+                                <li>Conducted load characterization from <strong>100 g to 300 g</strong> at a fixed input voltage of <strong>5.0 V</strong> to evaluate the effect of preload on actuator behavior.</li>
+                                <br>
+                                <li>Observed an average contraction time of <strong>4.6 ± 0.4 s</strong> and relaxation time of <strong>25 ± 4 s</strong> under varying load conditions.</li>
+                                <br>
+                                <li>Aggregated multiple test series to generate characteristic actuator response curves including temperature vs strain, temperature vs time, and 3D temperature–strain–time relationships.</li>
+                                <br>
+                                <li>Derived characteristic actuator parameters used in the robotic limb design, including an average actuation time of <strong>4.4 ± 0.5 s</strong>, relaxation time of <strong>24 ± 3 s</strong>, and a contracted displacement of <strong>109 ± 1 mm</strong>.</li>
                             </ul>
                         </div>
                         <figure>
@@ -112,11 +159,32 @@
                     <article class="article--center-figure">
                         <div class="article-body">
                             <h3 class="resume-section-title">2D Limb Characterization</h3>
-                            <p>This is a stand-in paragraph, content to follow!</p>
+                            <p>
+                                After establishing baseline actuator behavior in the 1D testbed, I developed a 2D limb characterization platform to evaluate how SMA actuation translated into controlled limb motion once integrated into the full mechanical assembly. This setup was used to study bend response under more realistic conditions, where actuator performance was influenced not only by heating and cooling behavior, but also by the limb structure, internal restoring forces, and the interaction of multiple attached actuators.
+                            </p>
+                            
+                            <p>
+                                The experimental setup combined an overhead camera mounted on adjustable stands, a Raspberry Pi with an MCC 134 thermocouple interface, Joule-heating driver circuitry, and a full PETG limb assembly mounted in a machinist vice. The limb consisted of three 3D-printed sections and used four SMA spring actuators arranged around the structure so the limb could bend in multiple directions. A 3D-printed internal tension spring helped return the limb toward its neutral outstretched position during cooling. To improve motion capture reliability, I instrumented the limb with eight visual markers using two color tracks, and positioned the assembly over a calibration checkerboard on a low-friction glass plate to support pixel-to-distance calibration and smoother motion during testing.
+                            </p>
+                            
+                            <p>
+                                Experiments were conducted in a similar manner to the 1D characterization tests, but now focused on integrated limb behavior. Individual actuators were energized while the software recorded synchronized bend angle and temperature data over time. This made it possible to observe how a single actuator responded while coupled to the full limb system, including the opposing SMA elements and the restoring forces from the printed structure. The setup was used to compare both averaged series behavior and single-run response, giving insight into repeatability, heating-driven bend progression, and the uncertainty present in the preliminary limb construction.
+                            </p>
+                            
                             <ul>
-                                <li>Created top-down camera setup with multi-color motion capture markers on a full limb.</li>
-                                <li>Automated experiments for target temperature vs. bend angle, bend angle vs. time, and actuation time vs. angle.</li>
-                                <li>Analyzed uncertainty ranges during primary actuation and improved thermal/position models.</li>
+                                <li>Designed and assembled a 2D robotic limb testbed to evaluate integrated SMA-driven bending behavior under realistic structural loading and restoring forces.</li>
+                                <br>
+                                <li>Built a synchronized instrumentation setup using an overhead camera, Raspberry Pi, MCC 134 thermocouple interface, and Joule-heating driver hardware.</li>
+                                <br>
+                                <li>Implemented multi-marker motion capture using dual-color tracking on an eight-marker limb assembly to improve positional measurement quality and bend-angle calculation.</li>
+                                <br>
+                                <li>Used a checkerboard calibration grid and glass test surface to support pixel-to-distance calibration and reduce friction during limb motion experiments.</li>
+                                <br>
+                                <li>Characterized bend angle versus time alongside SMA temperature to examine how thermal input translated into mechanical response during actuation.</li>
+                                <br>
+                                <li>Compared averaged series data with single-run results to evaluate repeatability, measurement precision, and uncertainty in preliminary limb behavior.</li>
+                                <br>
+                                <li>Demonstrated predictable actuation trends while identifying variability sources that informed future limb construction and downstream analysis workflows.</li>
                             </ul>
                         </div>
                         <figure>
@@ -126,7 +194,7 @@
                                     <img src="images/STARFISH/image37.png" alt="2D limb setup - view 2">
                                 </div>
                                 <img src="images/STARFISH/image38.png" alt="2D limb actuation sequence">
-                                <div class="media-grid media-grid--2">
+                                <div class="media-grid media-grid--2 media-grid--2d-limb-last">
                                     <img src="images/STARFISH/image39.png" alt="2D limb results figure 1">
                                     <img src="images/STARFISH/image40.png" alt="2D limb results figure 2">
                                 </div>
@@ -145,12 +213,32 @@
                     <article class="article--center-figure">
                         <div class="article-body">
                             <h3 class="resume-section-title">Software</h3>
-                            <p>This is a stand-in paragraph, content to follow!</p>
+                            <p>
+                                To support repeatable testing across the STARFISH characterization platforms, I developed a lightweight software stack on the Raspberry Pi that handled experiment control, sensor acquisition, motion tracking, and local user interaction. The goal was to keep the system portable and self-contained while still providing enough visibility and control to run structured actuator tests without relying on a full external workstation.
+                            </p>
+                            
+                            <p>
+                                The software integrated Python-based control scripts with the Raspberry Pi, an MCC 134 thermocouple interface, Joule-heating driver boards for SMA actuation, and OpenCV-based motion capture processing. This allowed synchronized collection of temperature and position data while also supporting actuator sequencing, calibration workflows, and test execution through a single interface. By localizing both control and processing on the Pi, the system was better suited for remote operation and future deployment in more constrained environments such as a vacuum chamber.
+                            </p>
+                            
+                            <p>
+                                I also developed a Flask-based web interface so the system could be calibrated, monitored, and commanded through a locally hosted webpage. This made the test setup easier to operate during experiments and created a cleaner pathway for remote connectivity, experiment repeatability, and future expansion of the control architecture.
+                            </p>
+                            
                             <ul>
-                                <li>Developed motion capture pipeline using OpenCV with contour moments for accurate ball tracking.</li>
-                                <li>Computed bend angles and arc radii from marker positions with color-separated tracks.</li>
-                                <li>Produced averaged measurements for more reliable series data across trials.</li>
+                                <li>Developed Raspberry Pi-based experiment software to coordinate actuator control, sensor logging, and motion capture for SMA characterization testing.</li>
+                                <br>
+                                <li>Integrated the MCC 134 thermocouple interface and Joule-heating driver hardware into a unified Python control workflow for synchronized actuation and temperature measurement.</li>
+                                <br>
+                                <li>Implemented OpenCV-based tracking routines to process visual marker motion and support position and bend-angle analysis during testing.</li>
+                                <br>
+                                <li>Built a Flask-hosted local web interface for calibration, experiment control, and operator interaction during test execution.</li>
+                                <br>
+                                <li>Structured the software for portable deployment on the Pi, reducing dependence on external hardware and supporting future remote operation in vacuum-chamber test environments.</li>
+                                <br>
+                                <li>Created a flexible software foundation for expanding STARFISH testing toward more automated characterization and model-informed experiment control.</li>
                             </ul>
+
                         </div>
                         <figure>
                             <div class="media-grid">

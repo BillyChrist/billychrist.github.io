@@ -440,7 +440,7 @@ body {
 
 /* STARFISH: slightly smaller centered video */
 #starfish .section-video {
-    width: 60%;
+    width: 40%;
 }
 
 /* Media grids: default single column. */
@@ -460,6 +460,12 @@ body {
     width: 100%;
     height: auto;
     border-radius: 0;
+}
+
+/* STARFISH 2D limb: clamp last two images to same box size */
+.media-grid--2d-limb-last img {
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
 }
 
 .content h3 {
