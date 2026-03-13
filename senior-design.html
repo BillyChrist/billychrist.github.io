@@ -29,96 +29,344 @@
             </div>
             <div class="resume-section">
                 <p class="project-intro">
-                    Capstone project developing a thrust vector control test stand with integrated mechanics, electronics,
-                    and real-time control software.
+                    Capstone project developing a thrust vector control (TVC) system for the LEAPFROG lunar lander research platform, integrating mechanical design, embedded electronics, and real-time control software into a hardware-in-the-loop test stand.
                 </p>
 
                 <hr class="resume-divider">
                 <article class="article--center-figure">
                     <div class="article-body">
                         <h3 class="resume-section-title">Project Overview</h3>
-                        <p>This is a stand-in paragraph, content to follow!</p>
-                        <ul>
-                            <li>Designed and assembled a TVC test stand for AME 441.</li>
-                            <li>Integrated mechanical structure, actuators, sensors, and embedded electronics.</li>
-                            <li>Developed control algorithms to study translational capability and angle vs. thrust behavior.</li>
-                        </ul>
-                    </div>
-                    <figure>
-                        <img src="images/SENIOR_DESIGN/TVC_Electronics_BlockDiagram.jpg" alt="TVC system overview" width="600">
-                    </figure>
-                </article>
-
-                <hr class="resume-divider">
-                <article class="article--center-figure">
-                    <div class="article-body">
-                        <h3 class="resume-section-title">Controls and System Constraints</h3>
-                        <p>This is a stand-in paragraph, content to follow!</p>
-                        <ul>
-                            <li>Defined system constraints including maximum thrust (300 N) and maximum gimbal angle (~11.19°).</li>
-                            <li>Used small-angle approximations and critically damped ACS assumptions for control design.</li>
-                            <li>Formulated corrective throttle compensation to maintain vertical thrust when gimbaling.</li>
-                        </ul>
-                    </div>
-                    <figure>
-                        <img src="images/SENIOR_DESIGN/TVC_ElectricalSchematic.jpg" alt="TVC controls and actuator layout" width="600">
-                    </figure>
-                </article>
-
-                <hr class="resume-divider">
-                <article class="article--center-figure">
-                    <div class="article-body">
-                        <h3 class="resume-section-title">Actuator Dynamics &amp; Kinematics</h3>
-                        <p>This is a stand-in paragraph, content to follow!</p>
-                        <ul>
-                            <li>Derived relationships between gimbal rotation (θ, ϕ) and actuator stroke (Lx, Ly).</li>
-                            <li>Used rotation matrices and system geometry to compute required actuator length changes.</li>
-                            <li>Linearized via a Jacobian to capture cross-axis coupling for small-angle motions.</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <hr class="resume-divider">
-                <article class="article--center-figure">
-                    <div class="article-body">
-                        <h3 class="resume-section-title">Electronics &amp; Software</h3>
-                        <p>This is a stand-in paragraph, content to follow!</p>
-                        <ul>
-                            <li>Implemented control logic on an STM32 microcontroller running C with RTOS.</li>
-                            <li>Integrated sensor suite including multiple IMUs and actuator potentiometers.</li>
-                            <li>Built redundancy and sensor fusion into the feedback loop for safety and precision.</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <hr class="resume-divider">
-                <article class="article--center-figure">
-                    <div class="article-body">
-                        <h3 class="resume-section-title">Testing &amp; Results</h3>
-                        <p>This is a stand-in paragraph, content to follow!</p>
-                        <ul>
-                            <li>Defined a test matrix covering axis sweeps, combined motions, and step responses.</li>
-                            <li>Collected time response data for gimbal motion (rise time, fall time, overshoot, settling time).</li>
-                            <li>Validated mapping between actuator commands and gimbal motion.</li>
-                        </ul>
                         <p>
-                            Additional imagery and build photos are available in the
-                            <code>images/SENIOR_DESIGN/</code> directory.
+                            This senior design project focused on developing a thrust vector control (TVC) test stand for the
+                            LEAPFROG research platform at USC’s Space Engineering Research Center. LEAPFROG is a terrestrial
+                            lunar lander testbed used to study control strategies, mechanical architectures, and flight
+                            software concepts for vertical landing vehicles.
                         </p>
+                        
+                        <p>
+                            Our team designed and integrated a dual-axis gimbal system capable of redirecting thrust using
+                            orthogonal linear actuators. The objective was to produce a platform capable of precisely
+                            controlling thrust vector orientation while measuring actuator position, vehicle attitude,
+                            and system response in real time. The resulting system combines mechanical structure,
+                            embedded electronics, and control software into a hardware-in-the-loop test environment
+                            for studying thrust-vector-based attitude control.
+                        </p>
+                        
+                        <ul>
+                            <li>Designed and integrated a thrust vector control (TVC) system for the LEAPFROG lunar lander research testbed.</li>
+                            <br>
+                            <li>Developed a dual-axis gimbal platform driven by orthogonal linear actuators for precise thrust vector positioning.</li>
+                            <br>
+                            <li>Integrated sensors including multiple IMUs and actuator position feedback to monitor system motion and orientation.</li>
+                            <br>
+                            <li>Implemented embedded control software capable of translating attitude commands into actuator motion.</li>
+                            <br>
+                            <li>Created a test stand capable of evaluating actuator dynamics, gimbal motion, and system response characteristics.</li>
+                        </ul>
                     </div>
+                    <figure>
+                        <img src="images/SENIOR_DESIGN/image43.jpeg" alt="TVC test stand photo">
+                    </figure>
                 </article>
 
                 <hr class="resume-divider">
                 <article class="article--center-figure">
                     <div class="article-body">
-                        <h3 class="resume-section-title">Media</h3>
-                        <p>This is a stand-in paragraph, content to follow!</p>
+                        <h3 class="resume-section-title">Electronics</h3>
+                        <p>
+                            The electronics architecture was designed to provide closed-loop control of the thrust vector
+                            control system while maintaining a modular structure that could be integrated with the
+                            broader LEAPFROG research platform. A central STM32 microcontroller coordinated actuator
+                            commands, sensor feedback, and communication with the ground station computer.
+                        </p>
+                        
+                        <p>
+                            The system incorporated multiple inertial measurement units (IMUs) to estimate vehicle
+                            orientation, along with potentiometers integrated into each linear actuator to measure
+                            actuator stroke and gimbal position. These sensors allowed the controller to estimate
+                            the current thrust vector orientation and generate corrective actuator commands in
+                            response to commanded motion or disturbances.
+                        </p>
+                        
+                        <p>
+                            Power electronics and relay driver hardware were used to control the linear actuators,
+                            while analog signals from the sensors were conditioned and routed to the STM32 for
+                            processing. The electronics were assembled on a custom mounting plate to keep the system
+                            organized and accessible during testing while allowing rapid iteration as components
+                            and wiring configurations were refined.
+                        </p>
+                        
                         <ul>
-                            <li><a href="video/SENIOR_DESIGN/media1.mov">TVC stand video 1</a></li>
-                            <li><a href="video/SENIOR_DESIGN/media2.mov">TVC stand video 2</a></li>
+                            <li>Designed the electronics architecture for a thrust vector control test stand using an STM32 microcontroller as the central controller.</li>
+                            <br>
+                            <li>Integrated multiple inertial measurement units (IMUs) to measure vehicle orientation and provide feedback for control algorithms.</li>
+                            <br>
+                            <li>Instrumented linear actuators with potentiometer feedback to measure actuator stroke and infer gimbal angle.</li>
+                            <br>
+                            <li>Implemented relay driver hardware and power routing to control actuator motion from the embedded controller.</li>
+                            <br>
+                            <li>Developed a complete wiring schematic documenting signal paths between sensors, actuators, microcontroller, and ground station interface.</li>
+                            <br>
+                            <li>Assembled the electronics system on a dedicated mounting plate to support rapid testing, debugging, and hardware iteration.</li>
+                        </ul>
+
+                    </div>
+                    <figure>
+                        <div class="media-grid">
+                            <img src="images/SENIOR_DESIGN/image44.jpeg" alt="Electronics assembly view 1">
+                            <img src="images/SENIOR_DESIGN/image45.jpeg" alt="Electronics assembly view 2">
+                            <img src="images/SENIOR_DESIGN/electric_assembly.jpg" alt="Electronics assembly detail">
+                        </div>
+                    </figure>
+                </article>
+                
+                <hr class="resume-divider">
+                <article class="article--center-figure">
+                    <div class="article-body">
+                        <h3 class="resume-section-title">Controls</h3>
+                        <p>
+                            The thrust vector control system operates by redirecting engine thrust to generate
+                            horizontal acceleration while maintaining sufficient vertical thrust to support the vehicle.
+                            The control model was developed to determine the gimbal angles required to produce a
+                            desired translational acceleration and to translate those angles into actuator commands
+                            for the gimbal mechanism.
+                        </p>
+                        
+                        <p>
+                            The first step in the analysis relates the desired horizontal acceleration of the vehicle
+                            to the required thrust vector angle. By tilting the thrust vector away from vertical, a
+                            horizontal force component is generated while the vertical component continues to oppose
+                            gravity. Using basic force decomposition, the relationship between commanded acceleration
+                            and gimbal angle can be expressed as a function of gravitational acceleration.
+                        </p>
+                        
+                        <p>
+                            Because tilting the thrust vector reduces the vertical component of thrust, additional
+                            thrust must be commanded to maintain the same net vertical force. A thrust compensation
+                            model was therefore implemented to adjust the commanded thrust magnitude as a function
+                            of the gimbal angles. This ensures that the vehicle maintains consistent lift even while
+                            the engine is vectored to generate lateral motion.
+                        </p>
+                        
+                        <p>
+                            Once the desired gimbal angles are determined, the system must convert those angular
+                            commands into physical actuator motion. The geometry of the gimbal mechanism was used
+                            to derive relationships between actuator stroke and gimbal rotation. These nonlinear
+                            relationships were linearized about the neutral position using a Jacobian approximation,
+                            allowing the controller to compute actuator length changes required to produce a given
+                            thrust vector orientation.
+                        </p>
+                        
+                        <p>
+                            The resulting control framework connects vehicle dynamics to hardware motion: desired
+                            acceleration determines the required thrust vector angle, thrust compensation maintains
+                            vertical lift, and the actuator mapping converts commanded angles into linear actuator
+                            positions that drive the gimbal system.
+                        </p>
+                        
+                        <ul>
+                            <li>Derived the relationship between desired horizontal acceleration and required thrust vector angle using force decomposition.</li>
+                            <br>
+                            <li>Calculated thrust magnitude requirements to maintain vertical lift while the engine is vectored.</li>
+                            <br>
+                            <li>Implemented a thrust compensation model that adjusts commanded thrust as a function of gimbal angle.</li>
+                            <br>
+                            <li>Derived actuator–gimbal kinematic relationships using system geometry and rotation matrices.</li>
+                            <br>
+                            <li>Linearized the nonlinear actuator mapping using a Jacobian approximation near the neutral position.</li>
+                            <br>
+                            <li>Developed a control formulation that converts desired thrust vector angles into actuator stroke commands.</li>
                         </ul>
                     </div>
+                    <figure>
+                        <div class="media-grid">
+                            <div class="media-grid media-grid--2">
+                                <img src="images/SENIOR_DESIGN/image48.jpeg" alt="Control system diagram 1">
+                                <img src="images/SENIOR_DESIGN/image49.jpeg" alt="Control system diagram 2">
+                            </div>
+                            <img src="images/SENIOR_DESIGN/image50.jpeg" alt="Control system diagram 3">
+                            <img src="images/SENIOR_DESIGN/image51.jpeg" alt="Control plots 1">
+                            <img src="images/SENIOR_DESIGN/image59.jpeg" alt="Control plots 9">
+                            <img src="images/SENIOR_DESIGN/image61.jpeg" alt="Control plots 11">
+                            <img src="images/SENIOR_DESIGN/image62.png" alt="Control plots 12">
+                        </div>
+                    </figure>
                 </article>
+
+                <hr class="resume-divider">
+                <article class="article--center-figure">
+                    <div class="article-body">
+                        <h3 class="resume-section-title">Software</h3>
+                        <p>
+                            The thrust vector control system was implemented on an STM32 microcontroller running a lightweight real-time operating system (RTOS). The software architecture was designed to separate sensing, control, and actuator commands into independent tasks, allowing the system to operate reliably while processing multiple sensor inputs and maintaining deterministic control timing.
+                        </p>
+
+                        <p>
+                            Sensor data is collected from three inertial measurement units (IMUs) and actuator position sensors integrated into the linear gimbal actuators. A dedicated sensor task continuously reads and validates incoming data streams, while a rolling buffer provides synchronized data snapshots to the control system.
+                        </p>
+
+                        <p>
+                            Multiple IMUs are used to provide redundant measurements of vehicle orientation and gimbal motion. Sensor fusion routines combine these measurements to improve attitude estimation accuracy while also allowing the system to fall back to valid sensors if one data stream becomes unreliable.
+                        </p>
+
+                        <p>
+                            The control system executes in parallel RTOS tasks responsible for thrust vector control, attitude stabilization, and engine control. Each control loop receives updated sensor measurements, computes the required actuator commands, and updates the thrust vector control mechanism in real time.
+                        </p>
+
+                        <p>
+                            Safety monitoring is handled by a dedicated system task that supervises sensor health and system state. If invalid sensor data or communication failures are detected, the software can fall back to redundant sensors or enter a safe operating mode to prevent unstable control behavior.
+                        </p>
+
+                        <ul>
+                            <li>Developed embedded flight control software on an STM32 microcontroller using C and a real-time operating system.</li>
+                            <br>
+                            <li>Implemented a modular task architecture separating sensor acquisition, control computation, and actuator commands.</li>
+                            <br>
+                            <li>Integrated three IMUs and actuator position sensors to measure vehicle attitude and gimbal orientation.</li>
+                            <br>
+                            <li>Implemented sensor fusion routines to improve measurement accuracy and provide redundancy in case of sensor failure.</li>
+                            <br>
+                            <li>Developed thrust vector control and attitude stabilization loops operating in real-time control tasks.</li>
+                            <br>
+                            <li>Implemented safety monitoring and fallback logic to maintain stable operation under sensor or communication faults.</li>
+                        </ul>
+                    </div>
+                    <figure>
+                        <img src="images/SENIOR_DESIGN/image63.jpeg" alt="Software overview diagram" width="600">
+                    </figure>
+                </article>
+
+                <hr class="resume-divider">
+                <article class="article--center-figure">
+                    <div class="article-body">
+                        <h3 class="resume-section-title">Data Collection &amp; Analysis</h3>
+                        <p>
+                            System testing focused on validating actuator response, gimbal motion, and sensor
+                            measurements used by the thrust vector control algorithm. A structured test matrix
+                            was developed to exercise the gimbal system across a range of commanded positions
+                            and actuator motions. These tests were designed to characterize actuator response,
+                            verify position sensing, and observe how the measured motion propagated through
+                            the sensor fusion pipeline used by the control system.
+                        </p>
+                        
+                        <p>
+                            During each test sequence, actuator position feedback was recorded along both
+                            gimbal axes while the system executed controlled motion commands. The resulting
+                            time histories capture the rise and fall behavior of the linear actuators as they
+                            drive the gimbal assembly. These measurements provide insight into the dynamic
+                            response of the mechanism, including actuator latency, peak displacement, and
+                            repeatability between cycles.
+                        </p>
+                        
+                        <p>
+                            The position measurements are also used as an input to the fused attitude
+                            estimation used by the control software. By comparing actuator feedback with
+                            inertial measurements from the IMU sensors, the system can estimate the true
+                            thrust vector orientation while detecting inconsistencies or sensor anomalies.
+                        </p>
+                        
+                        <p>
+                            Across repeated test cycles, the actuator response curves highlight both the
+                            achievable range of motion and the variability present in the hardware system.
+                            Maximum displacement values, transient response characteristics, and occasional
+                            measurement irregularities can be observed directly in the data. These results
+                            informed calibration parameters and provided confidence that the actuator and
+                            sensing system behaved predictably under repeated operation.
+                        </p>
+                        
+                        <ul>
+                        <li>Designed a structured experimental test matrix to evaluate actuator and gimbal performance.</li>
+                        <br>
+                        <li>Recorded actuator position feedback along both gimbal axes during controlled motion sequences.</li>
+                        <br>
+                        <li>Analyzed rise time, peak displacement, and repeatability of the linear actuators.</li>
+                        <br>
+                        <li>Validated the relationship between actuator position feedback and fused IMU measurements used by the control system.</li>
+                        <br>
+                        <li>Identified measurement variability and sensor anomalies during repeated actuation cycles.</li>
+                        <br>
+                        <li>Used experimental results to refine calibration parameters and verify system behavior.</li>
+                        </ul>
+                    </div>
+                    <figure>
+                        <div class="media-grid">
+                            <img src="images/SENIOR_DESIGN/test_matrix.PNG" alt="Test matrix diagram">
+                            <img src="images/SENIOR_DESIGN/image66.jpeg" alt="Data collection plots 1">
+                            <img src="images/SENIOR_DESIGN/image67.jpeg" alt="Data collection plots 2">
+                        </div>
+                    </figure>
+                </article>
+                
+                <hr class="resume-divider">
+                <article class="article--center-figure">
+                    <div class="article-body">
+                        <h3 class="resume-section-title">Assembly &amp; Integration</h3>
+                        <p>
+                            After subsystem development and testing were completed, the thrust vector
+                            control system was fully assembled into an integrated test stand. The
+                            mechanical structure, actuator system, electronics, and embedded control
+                            software were combined into a single platform capable of demonstrating
+                            closed-loop thrust vector control behavior.
+                        </p>
+                        
+                        <p>
+                            The final assembly integrates the gimbal mechanism, linear actuators,
+                            sensor instrumentation, and control electronics onto a rigid test frame.
+                            At the center of the gimbal assembly is an aluminum cylindrical mass
+                            designed to approximate the diameter and weight of the JetCat Pro turbine
+                            engine used for primary thrust on the LEAPFROG vehicle. This representative
+                            mass allows the test stand to reproduce the geometry and inertia of the
+                            propulsion system while enabling safe ground testing of the control system.
+                        </p>
+                        
+                        <p>
+                            The STM32-based control system processes sensor data in real time and
+                            commands the actuator system to adjust the thrust vector orientation.
+                        </p>
+                        
+                        <p>
+                            The completed test stand allowed the full system to be evaluated under
+                            realistic operating conditions. The integrated platform demonstrates the
+                            interaction between the mechanical design, control algorithms, embedded
+                            software, and sensing architecture developed throughout the project.
+                        </p>
+                        
+                        <p>
+                            The videos below show the fully assembled system operating during final
+                            testing. These demonstrations illustrate the motion of the gimbal assembly
+                            as the control system drives the actuators to reposition the thrust vector.
+                        </p>
+                        
+                        <ul>
+                        <li>Integrated the mechanical gimbal assembly, actuator system, electronics, and embedded control software into a unified test platform.</li>
+                        <br>
+                        <li>Installed sensor instrumentation and actuator feedback systems used by the control algorithms.</li>
+                        <br>
+                        <li>Verified communication between sensing, control, and actuator subsystems within the integrated system.</li>
+                        <br>
+                        <li>Conducted final system tests to demonstrate thrust vector motion and actuator coordination.</li>
+                        <br>
+                        <li>Validated the overall system architecture through full-system integration and operational testing.</li>
+                        </ul>
+                    </div>
+                    <figure>
+                        <div class="media-grid">
+                            <img src="images/SENIOR_DESIGN/image46.jpeg" alt="Assembly integration view 1">
+                            <img src="images/SENIOR_DESIGN/image47.jpeg" alt="Assembly integration view 2">
+                        </div>
+                    </figure>
+                </article>
+
+                <div class="section-media-center section-media-row">
+                    <video class="section-video-half" controls preload="metadata">
+                        <source src="video/SENIOR_DESIGN/media1.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video class="section-video-half" controls preload="metadata">
+                        <source src="video/SENIOR_DESIGN/media2.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
         </section>
     </main>
