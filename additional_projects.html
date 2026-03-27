@@ -12,131 +12,225 @@
         <div class="site-title-block">
             <a href="portfolio.html" class="home-link" aria-label="Home">Home</a>
             <h1>William Christian</h1>
-            <p>Additional Projects | Lunar Whale, Agentic Robotics</p>
+            <p>Additional Projects | Lunar Whale</p>
         </div>
     </header>
 
     <main class="content">
-        <section id="Additional Projects" class="systems-section">
+        <section id="additional-projects" class="systems-section">
             <div class="projects-bg" aria-hidden="true"></div>
             <div class="projects-overlay" aria-hidden="true"></div>
             <div class="projects-content">
-            <div class="resume-header">
-                <div class="project-title-stack">
-                    <h2 class="resume-main-title">Lunar Whale</h2>
-                    <div class="project-subtitle">Autonomous VTOL Drone Testbed</div>
+                <div class="resume-header">
+                    <div class="project-title-stack">
+                        <h2 class="resume-main-title">Lunar Whale</h2>
+                        <div class="project-subtitle">Autonomous VTOL Drone Testbed</div>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <p class="project-intro">
+                        Lunar Whale is an autonomous VTOL drone testbed built to investigate how distributed lifting
+                        surfaces, modular structures, and hybrid control architectures affect stability, controllability,
+                        and power efficiency across vertical and forward flight.
+                    </p>
+                    <p class="project-intro">
+                        The platform was started as an iterative experimental vehicle for rapid design-build-test cycles.
+                        Future work focuses on expanded telemetry, quantitative flight validation, and architecture updates
+                        informed by collected test data.
+                    </p>
+
+                    <hr class="resume-divider">
+                    <article class="article--center-figure">
+                        <div class="article-body">
+                            <h3 class="resume-section-title">Project Overview</h3>
+                            <p>
+                                The project was initiated as an experimental VTOL aircraft platform designed to rapidly test and iterate flight configurations, 
+                                with a specific focus on improving passive stability and extending flight endurance.
+                            </p>
+                            <p>
+                                Unlike a fixed-design vehicle, Lunar Whale was intentionally built as a reconfigurable testbed for evaluating how distributed lifting 
+                                surfaces, airfoil selection, and control surface placement affect both stability and power consumption. Particular emphasis is placed 
+                                on understanding whether passive aerodynamic features can reduce the need for continuous active control, thereby improving overall efficiency.
+                            </p>
+                            <p>
+                                Development has been driven by rapid design-build-test cycles, enabling direct comparison between configurations. The long-term objective 
+                                is to identify configurations that maximize flight time while maintaining stable and controllable behavior across both vertical and forward flight regimes.
+                            </p>
+                            <ul>
+                                <li>Designed as an experimental platform for rapid iteration of flight configurations.</li>
+                                <br>
+                                <li>Primary focus on passive stability mechanisms and their impact on control effort.</li>
+                                <br>
+                                <li>Used to evaluate how airfoil geometry and lifting surface distribution affect power consumption.</li>
+                                <br>
+                                <li>Project objective: maximize flight endurance through aerodynamic and control optimization.</li>
+                            </ul>
+                        </div>
+                        <figure>
+                            <div class="media-grid">
+                                <img src="images/ADDITIONAL_PROJECTS/Lunar_Whale/front_v2.PNG" alt="Lunar Whale front view">
+                                <img src="images/ADDITIONAL_PROJECTS/Lunar_Whale/full_iso3.PNG" alt="Lunar Whale isometric view">
+                            </div>
+                        </figure>
+                    </article>
+
+                    <hr class="resume-divider">
+                    <article class="article--center-figure">
+                        <div class="article-body">
+                            <h3 class="resume-section-title">Airfoil Design</h3>
+                            <p>
+                                The lifting surfaces were designed around the NACA 4412 profile, selected using iterative comparison of airfoil performance data. 
+                                Online tools such as airfoiltools.com were used throughout the design process to evaluate lift, drag, and stall characteristics 
+                                across expected operating conditions.
+                            </p>
+                            <ul>
+                                <li>Evaluated pitch range versus tilt transition behavior.</li>
+                                <br>
+                                <li>Performed iterative design and fabrication of test airfoils.</li>
+                                <br>
+                                <li>Used lightweight printed structures with treatment for surface quality and durability.</li>
+                                <br>
+                                <li>Referenced airfoiltools.com to evaluate and compare candidate airfoils during design iterations, guiding selection based on lift-to-drag behavior across relevant flight regimes.</li>
+                            </ul>
+                        </div>
+                        <figure>
+                            <div class="media-grid">
+                                <img src="images/ADDITIONAL_PROJECTS/Lunar_Whale/airfoil_bg.PNG" alt="Airfoil background and context">
+                                <img src="images/ADDITIONAL_PROJECTS/Lunar_Whale/NACA-4412-Airfoil.png" alt="NACA 4412 airfoil profile">
+                                <img src="images/ADDITIONAL_PROJECTS/Lunar_Whale/span.jpg" alt="Wing span and airfoil build">
+                            </div>
+                        </figure>
+                    </article>
+
+                    <hr class="resume-divider">
+                    <article class="article--center-figure">
+                        <div class="article-body">
+                            <h3 class="resume-section-title">Frame &amp; Mechanical Design</h3>
+                            <p>
+                                The frame was developed as a modular mechanical system to enable quick swaps of lifting
+                                surfaces and subsystem layouts. Structural design choices were driven by repeated assembly,
+                                landing loads, and manufacturability with available processes.
+                            </p>
+                            <p>
+                                The modular architecture allows controlled isolation of variables such as lifting surface placement and configuration, 
+                                enabling direct comparison between test cases without full airframe redesign.
+                            </p>
+                            <ul>
+                                <li>Designed modular interfaces for rapid reconfiguration and test turnaround.</li>
+                                <br>
+                                <li>Developed and validated tilt mechanisms for transition and control authority.</li>
+                                <br>
+                                <li>Balanced structural strength, weight, and durability across iteration cycles.</li>
+                            </ul>
+                        </div>
+                        <figure>
+                            <div class="media-grid">
+                                <img src="images/ADDITIONAL_PROJECTS/Lunar_Whale/tilt_mechanism_cad.PNG" alt="Tilt mechanism CAD">
+                                <img src="images/ADDITIONAL_PROJECTS/Lunar_Whale/tilt_mechanism.jpg" alt="Tilt mechanism hardware">
+                                <img src="images/ADDITIONAL_PROJECTS/Lunar_Whale/built_iso_2.jpg" alt="Built frame isometric view">
+                            </div>
+                        </figure>
+                    </article>
+
+                    <hr class="resume-divider">
+                    <article class="article--center-figure">
+                        <div class="article-body">
+                            <h3 class="resume-section-title">Avionics &amp; Software</h3>
+                            <p>
+                                The system supports both manual pilot control and structured experimental flight testing, enabling repeatable evaluation 
+                                of different aerodynamic configurations under consistent conditions.
+                            </p>
+                            <ul>
+                                <li>Integrated flight controller, sensing, actuation, and communication subsystems.</li>
+                                <br>
+                                <li>Implemented low-level stabilization and actuator control for VTOL behavior.</li>
+                                <br>
+                                <li>Structured software to support rapid testing and iterative control tuning.</li>
+                            </ul>
+                        </div>
+                        <figure>
+                            <div class="media-grid">
+                                <img src="images/ADDITIONAL_PROJECTS/Lunar_Whale/avionics_1.jpg" alt="Avionics architecture view 1">
+                                <img src="images/ADDITIONAL_PROJECTS/Lunar_Whale/avionics_2.jpg" alt="Avionics architecture view 2">
+                            </div>
+                        </figure>
+                    </article>
+
+                    <hr class="resume-divider">
+                    <h3 class="resume-section-title">Future Work</h3>
+                    <ul>
+                        <li>Refinement of aerodynamic airframe geometry based on initial flight testing results</li>
+                        <br>
+                        <li>Implementation of tilt mechanism for third propulsion unit</li>
+                        <br>
+                        <li>Integration of long-range telemetry and command systems</li>
+                        <br>
+                        <li>Quantitative flight testing to correlate configuration changes with power consumption</li>
+                        <br>
+                        <li>Onboard data logging for high-resolution performance analysis</li>
+                        <br>
+                        <li>Investigation of solar-assisted power systems for extended endurance</li>
+                    </ul>
                 </div>
             </div>
-            <div class="resume-section">
-                <p class="project-intro">
-                    Autonomous VTOL drone testbed designed to conduct experiments with airfoil design. 
-                </p>
+        </section>
+    </main>
 
-            <hr class="resume-divider">
-            <div class="resume-section">
-            <h3 class="resume-section-title">Airfoil Design</h3>
-                <p>
-                    The airfoil design was based on the NACA 4412-IL airfoil. This design was chosen based of the stable CL/CD though a wide range of AoA before stall. 
-                    With a +- 9 [deg] AoA before stall, this design allowed the highest safety margin during vertical and horizontal flight transitions.
-                </p>
-
-                    <ul>
-                    <li>pitch range vs tilt transition </li>
-                    <br>
-                    <li> Design & fabrication </li>
-                    <br>
-                    <li> Materials </li>
-                        --Foaming ligthweight PLA. Designed specifically to be printed spiralized, meaning there are no retractions, and no support material required. This ensures a clean print the best possiblility for eliminating surface anomalies and extraneous material.
-                    <br>
-                    <li> Coatings & treatment </li>
-                        -- Printed airfoils were coated with a thin layer of white paint to minimize absortivity and emissivity, while also ensuring a smooth surface for minimal drag.
-                        This coating also served to fill in any layer gaps and prevent fatigue and creep failures.
-                    <br>
-                    <li> The link below shows recorded performance data for the NACA 4412-IL airfoil. </li> 
-                    <a href="http://airfoiltools.com/airfoil/details?airfoil=naca4412-il">NACA 4412-IL Airfoil</a>
-
-                    </ul>
-
-            <hr class="resume-divider">
-            <h3 class="resume-section-title">Frame Design</h3>
-                <p>
-                    Modular frame designed for effecient iterations, made possible by easily configurable attatment mechanisms.
-                    The main challenge for this design was with the mounting brackets. Since the components had to be fabricated 
-                    using a 3D printer and limited to PLA, careful consideration was given to the direction of force with respect
-                    to the orientation of the layer lines. The other actor in this tug-of-war was limiting the weight of these components. 
-                    The images on the right show the mounting brackets for both the forward and aft spar sections...
-                    [insert image]
-                    The parts were designed specifically to be printed at the intended orientation, while including the required support to maintain 
-                    structural integrity during flight and landings. 
-                    After fatigue testing the results, the design was iterated to ensure
-                </p>
-
-                    <ul>
-                    <li> pitch range vs tilt transition </li>
-                    <br>
-                    <li> Design & fabrication </li>
-                    <br>
-                    <li> Modular frame; ease of iterating configurations for flight surfaces, structures, CL/CP tuning. </li>
-                    </ul>   
-
-            <hr class="resume-divider">
-            <h3 class="resume-section-title">Electronics & Control</h3>
-                <p>
-                    Arduino Teensy 4.1: Low level flight control.
-                </p>
-
-                    <ul>
-                    <li> Forward main props </li>
-                    <br>
-                    <li> Aft prop </li>
-                    <br>
-                    <li> Servos (MG90s) </li>
-                    <br>
-                    <li> IMU (MPU6050) </li>
-                    <br>
-                    <li> GPS (Neo-6M) </li>
-                    <br>
-                    <li> Microgear receiver </li>
-                    <br>
-                    <li> Microgear Flight Controller </li>
-                        
-                    </ul>
-
-
-
-            <hr class="resume-divider">
-            <h3 class="resume-section-title">Software</h3>
-                <p>
-                    Arduino dRehmFlight: Low level flight control
-                    Details about dRehmFlight and why it's being used.
-                    Who is Nicholar Rehm, and what does the software do? (Open source platform for experimental VTOL drone aircraft)
-                    Starting point for software stack (stack right word?)
-
-                    Ardupilot: navigation control
-                    Waypoint navigation with pre-programmed flight path. 
-                    - 
-                    -
-                </p>
-
-            <hr class="resume-divider">
-            <h3 class="resume-section-title">Software</h3>
-                <p>
-                    Future work includes...
-                    <li> Implementing a long range radio link for command and data handling. </li>
-                    <br>
-                    <li> Updating airframe design pending test of first version to determine desired configuration.</li>
-                    <br>
-                    <li> Solar cell array to increase flight time </li>
-                    <br>
-
-                    <li>  </li>
-                    <br>
-                    <li> item 2 </li>
-
-
-                </p>
-
+    <section class="work-samples-section">
+        <h2 class="work-samples-title">Work Samples</h2>
+        <nav class="project-nav">
+        <a class="project-tile" href="leapfrog.html">
+            <div class="project-icon">
+                <img src="images/LEAPFROG/LEAPFROG_icon.PNG" alt="LEAPFROG icon">
             </div>
+            <div class="project-text">
+                <h2>LEAPFROG</h2>
+                <p>Modular lunar lander test platform for flight software, controls, and hardware integration</p>
+            </div>
+        </a>
+        <a class="project-tile" href="starfish.html">
+            <div class="project-icon">
+                <img src="images/STARFISH/STARFISH_icon.PNG" alt="STARFISH icon">
+            </div>
+            <div class="project-text">
+                <h2>STARFISH</h2>
+                <p>Soft robotics research platform studying SMA actuators and motion control for space systems</p>
+            </div>
+        </a>
+        <a class="project-tile" href="senior-design.html">
+            <div class="project-icon">
+                <img src="images/SENIOR_DESIGN/SeniorDesign_icon.PNG" alt="Senior Design icon">
+            </div>
+            <div class="project-text">
+                <h2>Senior Design</h2>
+                <p>Thrust vector control system and validation test stand developed for vehicle integration</p>
+            </div>
+        </a>
+        <a class="project-tile" href="spacecraft-systems.html">
+            <div class="project-icon">
+                <img src="images/SYSTEMS_DESIGN/SCsystems_icon.PNG" alt="Spacecraft Systems icon">
+            </div>
+            <div class="project-text">
+                <h2>Spacecraft Systems Design</h2>
+                <p>Mission architecture and spacecraft design for a modular 1-km space telescope assembled at L2</p>
+            </div>
+        </a>
+        <a class="project-tile project-tile-current" href="additional_projects.html">
+            <div class="project-icon">
+                <img src="images/ADDITIONAL_PROJECTS/Lunar_Whale/lunar_whale_icon.PNG" alt="Lunar Whale icon">
+            </div>
+            <div class="project-text">
+                <h2>Lunar Whale</h2>
+                <p>Autonomous VTOL drone testbed for aerodynamic, mechanical, and control-system iteration</p>
+            </div>
+        </a>
+        </nav>
+    </section>
 
-    </body>
-    </html>
+    <footer>
+        <p>Contact: <a href="mailto:williamp.christian@gmail.com">williamp.christian@gmail.com</a> | <a href="tel:+16319422591">(631) 942-2591</a> | <a href="https://www.linkedin.com/in/-willchristian/" target="_blank" rel="noopener">linkedin.com/in/-willchristian</a></p>
+    </footer>
+    </div>
+</body>
+</html>
