@@ -17,10 +17,10 @@
     </header>
 
     <main class="content">
-        <section id="spacecraft-systems" class="systems-section">
-            <div class="systems-bg" aria-hidden="true"></div>
-            <div class="systems-overlay" aria-hidden="true"></div>
-            <div class="systems-content">
+        <section id="Additional Projects" class="systems-section">
+            <div class="projects-bg" aria-hidden="true"></div>
+            <div class="projects-overlay" aria-hidden="true"></div>
+            <div class="projects-content">
             <div class="resume-header">
                 <div class="project-title-stack">
                     <h2 class="resume-main-title">Lunar Whale</h2>
@@ -32,46 +32,111 @@
                     Autonomous VTOL drone testbed designed to conduct experiments with airfoil design. 
                 </p>
 
+            <hr class="resume-divider">
             <div class="resume-section">
-                <h3 class="resume-section-title">Airfoil Design</h3>
+            <h3 class="resume-section-title">Airfoil Design</h3>
                 <p>
-                    The airfoil design was based on the NACA 4412-IL airfoil.
-                    - pitch range vs tilt transition
-                    - Design & fabrication
-                    - Materials 
-                    - Coatings & treatment
+                    The airfoil design was based on the NACA 4412-IL airfoil. This design was chosen based of the stable CL/CD though a wide range of AoA before stall. 
+                    With a +- 9 [deg] AoA before stall, this design allowed the highest safety margin during vertical and horizontal flight transitions.
                 </p>
-                <h3 class="resume-section-title">Frame Design</h3>
+
+                    <ul>
+                    <li>pitch range vs tilt transition </li>
+                    <br>
+                    <li> Design & fabrication </li>
+                    <br>
+                    <li> Materials </li>
+                        --Foaming ligthweight PLA. Designed specifically to be printed spiralized, meaning there are no retractions, and no support material required. This ensures a clean print the best possiblility for eliminating surface anomalies and extraneous material.
+                    <br>
+                    <li> Coatings & treatment </li>
+                        -- Printed airfoils were coated with a thin layer of white paint to minimize absortivity and emissivity, while also ensuring a smooth surface for minimal drag.
+                        This coating also served to fill in any layer gaps and prevent fatigue and creep failures.
+                    <br>
+                    <li> The link below shows recorded performance data for the NACA 4412-IL airfoil. </li> 
+                    <a href="http://airfoiltools.com/airfoil/details?airfoil=naca4412-il">NACA 4412-IL Airfoil</a>
+
+                    </ul>
+
+            <hr class="resume-divider">
+            <h3 class="resume-section-title">Frame Design</h3>
                 <p>
                     Modular frame designed for effecient iterations, made possible by easily configurable attatment mechanisms.
                     The main challenge for this design was with the mounting brackets. Since the components had to be fabricated 
                     using a 3D printer and limited to PLA, careful consideration was given to the direction of force with respect
                     to the orientation of the layer lines. The other actor in this tug-of-war was limiting the weight of these components. 
                     The images on the right show the mounting brackets for both the forward and aft spar sections...
-                    [insert image code]
+                    [insert image]
                     The parts were designed specifically to be printed at the intended orientation, while including the required support to maintain 
                     structural integrity during flight and landings. 
                     After fatigue testing the results, the design was iterated to ensure
-
-
-                    - pitch range vs tilt transition
-                    - Design & fabrication
-                    - Modular frame; ease of iterating configurations for flight surfaces, structures, CL/CP tuning.
                 </p>
-                <h3 class="resume-section-title">Electronics & Control</h3>
-                    <p>
-                        The airfoil design was based on the NACA 4412-IL airfoil.
-                        - pitch range vs tilt transition
-                        - Design & fabrication
-                        - Modular frame; ease of iterating configurations for flight surfaces, structures, CL/CP tuning.
-                    </p>
+
+                    <ul>
+                    <li> pitch range vs tilt transition </li>
+                    <br>
+                    <li> Design & fabrication </li>
+                    <br>
+                    <li> Modular frame; ease of iterating configurations for flight surfaces, structures, CL/CP tuning. </li>
+                    </ul>   
+
+            <hr class="resume-divider">
+            <h3 class="resume-section-title">Electronics & Control</h3>
                 <p>
+                    Arduino Teensy 4.1: Low level flight control.
+                </p>
+
+                    <ul>
+                    <li> Forward main props </li>
+                    <br>
+                    <li> Aft prop </li>
+                    <br>
+                    <li> Servos (MG90s) </li>
+                    <br>
+                    <li> IMU (MPU6050) </li>
+                    <br>
+                    <li> GPS (Neo-6M) </li>
+                    <br>
+                    <li> Microgear receiver </li>
+                    <br>
+                    <li> Microgear Flight Controller </li>
+                        
+                    </ul>
+
+
+
+            <hr class="resume-divider">
+            <h3 class="resume-section-title">Software</h3>
+                <p>
+                    Arduino dRehmFlight: Low level flight control
+                    Details about dRehmFlight and why it's being used.
+                    Who is Nicholar Rehm, and what does the software do? (Open source platform for experimental VTOL drone aircraft)
+                    Starting point for software stack (stack right word?)
+
+                    Ardupilot: navigation control
+                    Waypoint navigation with pre-programmed flight path. 
+                    - 
+                    -
+                </p>
+
+            <hr class="resume-divider">
+            <h3 class="resume-section-title">Software</h3>
+                <p>
+                    Future work includes...
+                    <li> Implementing a long range radio link for command and data handling. </li>
+                    <br>
+                    <li> Updating airframe design pending test of first version to determine desired configuration.</li>
+                    <br>
+                    <li> Solar cell array to increase flight time </li>
+                    <br>
+
+                    <li>  </li>
+                    <br>
+                    <li> item 2 </li>
+
 
                 </p>
 
-                </p>
             </div>
-               <a href="http://airfoiltools.com/airfoil/details?airfoil=naca4412-il">NACA 4412-IL Airfoil</a>
 
     </body>
     </html>

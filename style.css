@@ -14,7 +14,7 @@ body {
     position: fixed;
     inset: 0;
     height: 140vh;
-    background-image: url("main_background.jpg");
+    background-image: url("images/MAIN/main_background.jpg");
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
