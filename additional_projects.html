@@ -84,6 +84,10 @@
                                 Online tools such as airfoiltools.com were used throughout the design process to evaluate lift, drag, and stall characteristics 
                                 across expected operating conditions.
                             </p>
+                            <p>
+                                The main wing was also configured with a 6 degree dihedral angle to introduce passive roll stability, improving lateral self-correction behavior
+                                during disturbances and reducing reliance on continuous active roll control.
+                            </p>
                             <ul>
                                 <li>Evaluated pitch range versus tilt transition behavior.</li>
                                 <br>
@@ -92,6 +96,7 @@
                                 <li>Used lightweight printed structures with treatment for surface quality and durability.</li>
                                 <br>
                                 <li>Referenced airfoiltools.com to evaluate and compare candidate airfoils during design iterations, guiding selection based on lift-to-drag behavior across relevant flight regimes.</li>
+
                             </ul>
                         </div>
                         <figure>
@@ -156,6 +161,51 @@
                             </div>
                         </figure>
                     </article>
+
+                    <hr class="resume-divider">
+                    <h3 class="resume-section-title">Test Strategy &amp; Expected Outcomes</h3>
+
+                    <p>
+                        While full flight testing is still in progress, the platform was designed with a structured testing methodology 
+                        to evaluate how configuration changes affect stability and power consumption.
+                    </p>
+
+                    <p>
+                        The primary goal of testing is to determine whether passive aerodynamic features, such as aft lifting surfaces, 
+                        can reduce control effort and improve overall flight efficiency.
+                    </p>
+
+                    <ul>
+                    <li><strong>Planned Test Comparisons:</strong>
+                        <ul>
+                            <li>Baseline configuration (no aft lifting surfaces)</li>
+                            <li>Aft lifting surfaces at neutral incidence</li>
+                            <li>Aft lifting surfaces at varying positive incidence angles</li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li><strong>Key Metrics:</strong>
+                        <ul>
+                            <li>Total power consumption during steady forward flight</li>
+                            <li>Required control input / actuator activity</li>
+                            <li>Pitch stability and damping response</li>
+                            <li>Trim condition and steady-state attitude</li>
+                        </ul>
+                    </li>
+                    <br>
+                    <li><strong>Expected Observations:</strong>
+                        <ul>
+                            <li>Improved passive stability with aft lifting surfaces</li>
+                            <li>Potential reduction in control system workload</li>
+                            <li>Trade-off between added drag and reduced control effort</li>
+                        </ul>
+                    </li>
+                    </ul>
+
+                    <p>
+                        The outcome of these tests will guide future airframe iterations, with the objective of identifying configurations 
+                        that provide measurable improvements in flight endurance without sacrificing controllability.
+                    </p>
 
                     <hr class="resume-divider">
                     <h3 class="resume-section-title">Future Work</h3>
@@ -232,5 +282,19 @@
         <p>Contact: <a href="mailto:williamp.christian@gmail.com">williamp.christian@gmail.com</a> | <a href="tel:+16319422591">(631) 942-2591</a> | <a href="https://www.linkedin.com/in/-willchristian/" target="_blank" rel="noopener">linkedin.com/in/-willchristian</a></p>
     </footer>
     </div>
+    <script>
+        (function () {
+            var bg = document.querySelector('.projects-bg');
+            if (!bg) return;
+            function updateProjectsBg() {
+                var y = window.scrollY || window.pageYOffset || 0;
+                var speed = 0.18;
+                bg.style.transform = 'translate(-50%, -50%) translate3d(0,' + (-y * speed) + 'px,0) rotate(90deg)';
+            }
+            window.addEventListener('scroll', updateProjectsBg, { passive: true });
+            window.addEventListener('resize', updateProjectsBg);
+            updateProjectsBg();
+        })();
+    </script>
 </body>
 </html>
